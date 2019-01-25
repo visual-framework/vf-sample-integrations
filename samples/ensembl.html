@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <title>Ensembl genome browser 95</title>
+
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="//static.ensembl.org/minified/399b13057333f23476d255325ae09a35.ie7.css"/><![endif]--><!--[if gt IE 7]><link rel="stylesheet" type="text/css" media="all" href="//static.ensembl.org/minified/399b13057333f23476d255325ae09a35.css"/><![endif]--><!--[if !IE]><!--><link rel="stylesheet" type="text/css" media="all" href="//static.ensembl.org/minified/399b13057333f23476d255325ae09a35.css"/><!--<![endif]--><!--[if lte IE 7]><link rel="stylesheet" type="text/css" media="all" href="//static.ensembl.org/minified/ff84a5cead9528c97d11d1adc06a4dfe.image.ie7.css"/><![endif]--><!--[if gt IE 7]><link rel="stylesheet" type="text/css" media="all" href="//static.ensembl.org/minified/ff84a5cead9528c97d11d1adc06a4dfe.image.css"/><![endif]--><!--[if !IE]><!--><link rel="stylesheet" type="text/css" media="all" href="//static.ensembl.org/minified/ff84a5cead9528c97d11d1adc06a4dfe.image.css"/><!--<![endif]-->
+  <link href="//static.ensembl.org/i/ensembl-favicon.png" rel="icon" type="image/png" />
+  <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png" />
+  <link href="//www.ensembl.org/opensearch/all.xml" type="application/opensearchdescription+xml" rel="search" title="Ensembl (All)" />
+
+  <meta name="google-site-verification" content="tG3WW0bg9gNaIHH002gJl-fV2k0bzf-ZxC8pBqXTaNo" />
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+<script>var prefetch = ['/minified/a1f5a287e2060c1282885aa033441335.jpg','/minified/b26c68751beb94ad20a822fe051856b5.png','/minified/92a003faa3c0b6d25bff4371cce500ec.png','/minified/1a99c850129bf424e889e54ab4273fc4.png','/minified/21cc1a36be7779864ca7ba72460dd116.png','/minified/b2cbeb7611b1f081d5edc72a96b277e7.png','/minified/bbd55256c88a7bcce7054dbfa36a3c2a.png'];</script>
+</head>
+<body class="mac no_tabs static" data-pace="2" id="ensembl-webpage">
+
+  <div id="min_width_container">
+    <div id="min_width_holder">
+      <div id="masthead" class="js_panel">
+        <input type="hidden" class="panel_type" value="Masthead" />
+        <div class="logo_holder"><a href="/"><div class="logo-header print_hide" title="Ensembl Home">&nbsp;</div></a><span class="mobile-only species-header">Ensembl</span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png screen_hide_inline" style="background-size: 1233.33333333333px 893.25px;background-position: -1008.86666666667px -282.375px;height: 45px;width: 185px" alt="Ensembl Home" title="Ensembl Home"/></div>
+        <div class="mh print_hide">
+          <div class="account_holder"><div class="_account_holder"><div class="account-loading">Loading&hellip;</div><form action="/Ajax/accounts_dropdown"></form></div></div>
+          <div class="tools_holder"><ul class="tools"><li><a class="constant" href="/Multi/Tools/Blast?db=core">BLAST/BLAT</a></li><li><a class="constant" href="/info/docs/tools/vep/">VEP</a></li><li><a class="constant" href="/info/docs/tools/index.html">Tools</a></li><li><a class="constant" href="/biomart/martview">BioMart</a></li><li><a class="constant" href="/downloads.html">Downloads</a></li><li><a class="constant" href="/info/">Help &amp; Docs</a></li><li class="last"><a class="constant" href="http://www.ensembl.info">Blog</a></li></ul><div class="more"><a href="#">More <span class="arrow">&#9660;</span></a></div></div>
+          <div class="search_holder print_hide">
+    <div id="searchPanel" class="js_panel">
+      <input type="hidden" class="panel_type" value="SearchBox" />
+      <form action="/Multi/Psychic">
+        <div class="search print_hide">
+          <div class="sites button">
+            <img class="search_image no-sprite badge-16" src="//static.ensembl.org/i/search/ensembl.gif" alt="" />
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="width: 7px;height: 16px;background-position: -776px -47px;background-size: 1000px 794px" />
+            <input type="hidden" name="site" value="ensembl_all" />
+          </div>
+          <div>
+            <label class="hidden" for="se_q">Search terms</label>
+            <input class="query inactive" id="se_q" type="text" name="q" value="Search all species&hellip;" data-role="none" onkeydown="if (event.keyCode == 13) { $(this).closest('form').submit(); return false; }" />
+          </div>
+          <div class="button"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="cursor: pointer;height: 16px;background-position: -270px -47px;background-size: 1000px 794px;width: 16px" alt="Search&nbsp;&raquo;" onClick="$(this).closest('form').submit()"/></div>
+        </div>
+        <div class="site_menu hidden">
+          <div class="ensembl_all"><img class="no-sprite" src="//static.ensembl.org/i/search/ensembl.gif" class="badge-16" alt="Search all species"/>Search all species<input type="hidden" value="Search all species&hellip;" /></div>
+<div class="ensembl_genomes"><img class="no-sprite" src="//static.ensembl.org/i/search/ensembl_genomes.gif" class="badge-16" alt="Search Ensembl genomes"/>Search Ensembl genomes<input type="hidden" value="Search Ensembl genomes&hellip;" /></div>
+<div class="vega"><img class="no-sprite" src="//static.ensembl.org/i/search/vega.gif" class="badge-16" alt="Search Vega"/>Search Vega<input type="hidden" value="Search Vega&hellip;" /></div>
+<div class="ebi"><img class="no-sprite" src="//static.ensembl.org/i/search/ebi.gif" class="badge-16" alt="Search EMBL-EBI"/>Search EMBL-EBI<input type="hidden" value="Search EMBL-EBI&hellip;" /></div>
+<div class="sanger"><img class="no-sprite" src="//static.ensembl.org/i/search/sanger.gif" class="badge-16" alt="Search Sanger"/>Search Sanger<input type="hidden" value="Search Sanger&hellip;" /></div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+        </div>
+
+
+
+
+      </div>
+
+      <div id="main_holder">
+
+
+      <div id="widemain">
+
+
+
+<div id="static">
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "Ensembl",
+  "url": "http://www.ensembl.org/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://www.ensembl.org/Multi/Search/Results?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<div class="grid-container">
+  <div class="grid-row">
+    <div class="grid-col-4">
+
+<script type="application/ld+json">
+{"@id":"http://www.ensembl.org/#project","provider":{"@type":"Organization","name":"Ensembl","email":"helpdesk@ensembl.org"},"@context":"http://schema.org","@type":"DataCatalog","keywords":"genomics, bioinformatics, vertebrate, EBI, genetic, research, gene, regulation, variation, tool, download","url":"http://www.ensembl.org","sourceOrganization":{"name":"European Bioinformatics Institute","@type":"Organization","url":"https://www.ebi.ac.uk"},"name":"Ensembl","dataset":{"@type":"Dataset","name":"Ensembl Comparative Genomics Data","keywords":"phylogenetics, evolution, homology, synteny","url":"http://www.ensembl.org/info/genome/compara/accessing_compara.html","distribution":[{"contentURL":"ftp://ftp.ensembl.org/pub/emf/ensembl-compara/","name":"Ensembl Comparative Genomics - EMF files","@type":"DataDownload","description":"Alignments of resequencing data for Ensembl vertebrate species","fileFormat":"emf"}],"includedInDataCatalog":"http://www.ensembl.org/#project","description":"Gene trees, protein families and alignments across the vertebrate taxonomic space"}}
+</script>
+
+      <div class="plain-box no-top-margin">
+        <div style="float:left;width:15%">
+          <div class="plain-box unbordered">
+            <h2>Tools</h2>
+            <p><a href="/info/docs/tools/index.html">All tools</a></p>
+          </div>
+        </div>
+        <div style="float:left;width:28%">
+          <div class="plain-box unbordered">
+            <h2><a href="/biomart/martview" class="nodeco">BioMart&nbsp&nbsp;&gt;</a></h2>
+            <p>Export custom datasets from Ensembl with this data-mining tool</p>
+          </div>
+        </div>
+        <div style="float:left;width:28%">
+          <div class="plain-box unbordered">
+            <h2><a href="/Multi/Tools/Blast?db=core" class="nodeco">BLAST/BLAT&nbsp&nbsp;&gt;</a></h2>
+            <p>Search our genomes for your DNA or protein sequence</p>
+          </div>
+        </div>
+        <div style="float:left;width:28%">
+          <div class="plain-box unbordered">
+            <h2><a href="/info/docs/tools/vep/" class="nodeco">Variant Effect Predictor&nbsp;&nbsp;&gt;</a></h2>
+            <p>Analyse your own variants and predict the functional consequences of
+            known and unknown variants</p>
+          </div>
+        </div></div>
+      <div class="tinted-box no-top-margin home-search">
+        <div id="SpeciesSearch" class="js_panel"><input type="hidden" class="panel_type" value="SearchBox" /><form action="/Multi/Psychic" method="get" class="no-sel search-form homepage-search-form clear"><fieldset><input value="ensembl" type="hidden" name="site" /><div class="form-field"><div class="ff-right"><h3>Search</h3></div></div><div class="form-field"><div class="ff-right"><select id="species" name="species" class="input fselect"><option value="">All species</option><option value="help">Help and Documentation</option><option disabled="disabled" value="">---</option><optgroup label="Favourite species"><option value="Homo_sapiens">Human</option><option value="Mus_musculus">Mouse</option><option value="Danio_rerio">Zebrafish</option></optgroup><option value="" disabled="disabled">---</option><option value="Gopherus_agassizii">Agassiz's desert tortoise</option><option value="Mus_spretus">Algerian mouse</option><option value="Vicugna_pacos">Alpaca</option><option value="Poecilia_formosa">Amazon molly</option><option value="Ursus_americanus">American black bear</option><option value="Colobus_angolensis_palliatus">Angola colobus</option><option value="Anolis_carolinensis">Anole lizard</option><option value="Dasypus_novemcinctus">Armadillo</option><option value="Scleropages_formosus">Asian bonytongue</option><option value="Labrus_bergylta">Ballan wrasse</option><option value="Stegastes_partitus">Bicolor damselfish</option><option value="Rhinopithecus_bieti">Black snub-nosed monkey</option><option value="Saimiri_boliviensis_boliviensis">Bolivian squirrel monkey</option><option value="Pan_paniscus">Bonobo</option><option value="Cavia_aperea">Brazilian guinea pig</option><option value="Haplochromis_burtoni">Burton's mouthbrooder</option><option value="Otolemur_garnettii">Bushbaby</option><option value="Ciona_intestinalis">C.intestinalis</option><option value="Ciona_savignyi">C.savignyi</option><option value="Caenorhabditis_elegans">Caenorhabditis elegans</option><option value="Cebus_capucinus">Capuchin</option><option value="Felis_catus">Cat</option><option value="Astyanax_mexicanus">Cave fish</option><option value="Ictalurus_punctatus">Channel catfish</option><option value="Gallus_gallus">Chicken</option><option value="Pan_troglodytes">Chimpanzee</option><option value="Cricetulus_griseus_chok1gshd">Chinese hamster CHOK1GS</option><option value="Cricetulus_griseus_crigri">Chinese hamster CriGri</option><option value="Pelodiscus_sinensis">Chinese softshell turtle</option><option value="Anabas_testudineus">Climbing perch</option><option value="Amphiprion_ocellaris">Clown anemonefish</option><option value="Gadus_morhua">Cod</option><option value="Latimeria_chalumnae">Coelacanth</option><option value="Propithecus_coquereli">Coquerel's sifaka</option><option value="Bos_taurus">Cow</option><option value="Macaca_fascicularis">Crab-eating macaque</option><option value="Fukomys_damarensis">Damara mole rat</option><option value="Octodon_degus">Degu</option><option value="Canis_lupus_dingo">Dingo</option><option value="Canis_familiaris">Dog</option><option value="Tursiops_truncatus">Dolphin</option><option value="Equus_asinus_asinus">Donkey</option><option value="Mandrillus_leucophaeus">Drill</option><option value="Anas_platyrhynchos">Duck</option><option value="Astatotilapia_calliptera">Eastern happy</option><option value="Loxodonta_africana">Elephant</option><option value="Mustela_putorius_furo">Ferret</option><option value="Ficedula_albicollis">Flycatcher</option><option value="Drosophila_melanogaster">Fruitfly</option><option value="Takifugu_rubripes">Fugu</option><option value="Nomascus_leucogenys">Gibbon</option><option value="Capra_hircus">Goat</option><option value="Mesocricetus_auratus">Golden Hamster</option><option value="Rhinopithecus_roxellana">Golden snub-nosed monkey</option><option value="Gorilla_gorilla">Gorilla</option><option value="Seriola_dumerili">Greater amberjack</option><option value="Cavia_porcellus">Guinea Pig</option><option value="Poecilia_reticulata">Guppy</option><option value="Eptatretus_burgeri">Hagfish</option><option value="Erinaceus_europaeus">Hedgehog</option><option value="Equus_caballus">Horse</option><option value="Homo_sapiens">Human</option><option value="Procavia_capensis">Hyrax</option><option value="Oryzias_melastigma">Indian medaka</option><option value="Oryzias_latipes">Japanese medaka HdrR</option><option value="Oryzias_latipes_hni">Japanese medaka HNI</option><option value="Oryzias_latipes_hsok">Japanese medaka HSOK</option><option value="Dipodomys_ordii">Kangaroo rat</option><option value="Phascolarctos_cinereus">Koala</option><option value="Petromyzon_marinus">Lamprey</option><option value="Panthera_pardus">Leopard</option><option value="Jaculus_jaculus">Lesser Egyptian jerboa</option><option value="Echinops_telfairi">Lesser hedgehog tenrec</option><option value="Chinchilla_lanigera">Long-tailed chinchilla</option><option value="Neolamprologus_brichardi">Lyretail cichlid</option><option value="Aotus_nancymaae">Ma's night monkey</option><option value="Macaca_mulatta">Macaque</option><option value="Pundamilia_nyererei">Makobe Island cichlid</option><option value="Kryptolebias_marmoratus">Mangrove rivulus</option><option value="Callithrix_jacchus">Marmoset</option><option value="Pteropus_vampyrus">Megabat</option><option value="Myotis_lucifugus">Microbat</option><option value="Amphilophus_citrinellus">Midas cichlid</option><option value="Xiphophorus_couchianus">Monterrey platyfish</option><option value="Mus_musculus">Mouse</option><option value="Microcebus_murinus">Mouse Lemur</option><option value="Fundulus_heteroclitus">Mummichog</option><option value="Heterocephalus_glaber_female">Naked mole-rat female</option><option value="Heterocephalus_glaber_male">Naked mole-rat male</option><option value="Peromyscus_maniculatus_bairdii">Northern American deer mouse</option><option value="Esox_lucius">Northern pike</option><option value="Mola_mola">Ocean sunfish</option><option value="Papio_anubis">Olive baboon</option><option value="Monodelphis_domestica">Opossum</option><option value="Amphiprion_percula">Orange clownfish</option><option value="Pongo_abelii">Orangutan</option><option value="Chrysemys_picta_bellii">Painted turtle</option><option value="Ailuropoda_melanoleuca">Panda</option><option value="Paramormyrops_kingsleyae">Paramormyrops kingsleyae</option><option value="Periophthalmus_magnuspinnatus">Periophthalmus magnuspinnatus</option><option value="Sus_scrofa">Pig</option><option value="Macaca_nemestrina">Pig-tailed macaque</option><option value="Ochotona_princeps">Pika</option><option value="Xiphophorus_maculatus">Platyfish</option><option value="Ornithorhynchus_anatinus">Platypus</option><option value="Ursus_maritimus">Polar bear</option><option value="Microtus_ochrogaster">Prairie vole</option><option value="Oryctolagus_cuniculus">Rabbit</option><option value="Rattus_norvegicus">Rat</option><option value="Vulpes_vulpes">Red fox</option><option value="Pygocentrus_nattereri">Red-bellied piranha</option><option value="Mus_caroli">Ryukyu mouse</option><option value="Saccharomyces_cerevisiae">Saccharomyces cerevisiae</option><option value="Poecilia_latipinna">Sailfin molly</option><option value="Ovis_aries">Sheep</option><option value="Cyprinodon_variegatus">Sheepshead minnow</option><option value="Poecilia_mexicana">Shortfin molly</option><option value="Sorex_araneus">Shrew</option><option value="Mus_pahari">Shrew mouse</option><option value="Choloepus_hoffmanni">Sloth</option><option value="Cercocebus_atys">Sooty mangabey</option><option value="Acanthochromis_polyacanthus">Spiny chromis</option><option value="Lepisosteus_oculatus">Spotted gar</option><option value="Ictidomys_tridecemlineatus">Squirrel</option><option value="Gasterosteus_aculeatus">Stickleback</option><option value="Monopterus_albus">Swamp eel</option><option value="Carlito_syrichta">Tarsier</option><option value="Sarcophilus_harrisii">Tasmanian devil</option><option value="Tetraodon_nigroviridis">Tetraodon</option><option value="Panthera_tigris_altaica">Tiger</option><option value="Hippocampus_comes">Tiger tail seahorse</option><option value="Oreochromis_niloticus">Tilapia</option><option value="Cynoglossus_semilaevis">Tongue sole</option><option value="Tupaia_belangeri">Tree Shrew</option><option value="Sphenodon_punctatus">Tuatara</option><option value="Scophthalmus_maximus">Turbot</option><option value="Meleagris_gallopavo">Turkey</option><option value="Nannospalax_galili">Upper Galilee mountains blind mole rat</option><option value="Chlorocebus_sabaeus">Vervet-AGM</option><option value="Notamacropus_eugenii">Wallaby</option><option value="Gambusia_affinis">Western mosquitofish</option><option value="Xenopus_tropicalis">Xenopus</option><option value="Seriola_lalandi_dorsalis">Yellowtail amberjack</option><option value="Taeniopygia_guttata">Zebra Finch</option><option value="Maylandia_zebra">Zebra mbuna</option><option value="Danio_rerio">Zebrafish</option><option value="Mastacembelus_armatus">Zig-zag eel</option></select><label for="q">&nbsp;for</label></div></div><div class="form-field ff-multi"><div class="ff-inline ff-right"><input type="text" value=" " id="q" class="input inactive _string ftext query optional" name="q" size="50" /><input value="Go" type="submit" class="fbutton" /></div><div class="ff-notes"><p class="search-example">e.g. <a class="nowrap" href="/Multi/Psychic?q=BRCA2">BRCA2</a> or <a class="nowrap" href="/Multi/Psychic?q=rat 5:62797383-63627669">rat 5:62797383-63627669</a> or <a class="nowrap" href="/Multi/Psychic?q=rs699">rs699</a> or <a class="nowrap" href="/Multi/Psychic?q=coronary heart disease">coronary heart disease</a></p></div></div></fieldset></form></div>
+      </div>
+      <div class="plain-box no-top-margin">
+        <div class="js_panel">
+          <input type="hidden" class="panel_type" value="SpeciesList" />
+            <div class="column_wrapper"><div class="column-two static_all_species"><h3>All genomes</h3>
+    <p><select class="fselect _all_species"><option value="">-- Select a species --</option></select></p>
+    <ul class="space-above">
+      <li><a href="/info/about/species.html">View full list of all Ensembl species</a></li>
+      <li class="customise-species-list"><a class="_list_edit modal_link" href="/Multi/Account/Login">Edit your favourites</a></li>
+    </ul>
+    </div><div class="column-two fave-genomes"><h3>Favourite genomes</h3><div class="_species_fav_container species-list">
+<div class="species-box-outer">
+  <div class="species-box">
+    <a href="/Homo_sapiens/Info/Index"><img src="//static.ensembl.org/i/species/Homo_sapiens.png" alt="Homo sapiens" title="Browse Homo sapiens" class="badge-48"/></a>
+    <a href="/Homo_sapiens/Info/Index" class="species-name">Human</a>
+    <div class="assembly">GRCh38.p12</div>
+  </div>
+  <a href="/info/website/tutorials/grch37.html" class="species-extra">Still using GRCh37?</a>
+</div>
+<div class="species-box-outer">
+  <div class="species-box">
+    <a href="/Mus_musculus/Info/Index"><img src="//static.ensembl.org/i/species/Mus_musculus.png" alt="Mus musculus" title="Browse Mus musculus" class="badge-48"/></a>
+    <a href="/Mus_musculus/Info/Index" class="species-name">Mouse</a>
+    <div class="assembly">GRCm38.p6</div>
+  </div>
+
+</div>
+<div class="species-box-outer">
+  <div class="species-box">
+    <a href="/Danio_rerio/Info/Index"><img src="//static.ensembl.org/i/species/Danio_rerio.png" alt="Danio rerio" title="Browse Danio rerio" class="badge-48"/></a>
+    <a href="/Danio_rerio/Info/Index" class="species-name">Zebrafish</a>
+    <div class="assembly">GRCz11</div>
+  </div>
+
+</div></div><div class="hidden reorder_species clear _species_sort_container"><p>For easy access to commonly used genomes, drag from the bottom list to the top one</p>
+        <p><strong>Favourites</strong></p>
+          <ul class="_favourites"></ul>
+        <p><strong>Other available species</strong></p>
+          <ul class="_species"></ul>
+        <p><a href="#Done" class="button _list_done">Done</a>
+          <a href="#Reset" class="button _list_reset">Restore default list</a></p></div><input value="[&quot;Primates&quot;,&quot;Euarchontoglires&quot;,&quot;Laurasiatheria&quot;,&quot;Afrotheria&quot;,&quot;Xenarthra&quot;,&quot;Mammalia&quot;,&quot;Sauropsida&quot;,&quot;Amphibia&quot;,&quot;Actinopterygii&quot;,&quot;Vertebrata&quot;,&quot;Chordata&quot;,&quot;Eukaryota&quot;]" type="hidden" name="taxon_order" class="json js_param" /></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-col-2">
+      <div class="plain-box unbordered whats-new">
+        <p>Ensembl is a genome browser for vertebrate genomes that
+           supports research in comparative genomics, evolution,
+           sequence variation and transcriptional regulation. Ensembl
+           annotate genes, computes multiple alignments, predicts
+           regulatory function and collects disease data. Ensembl tools
+           include BLAST, BLAT, BioMart and the Variant Effect
+           Predictor (VEP) for all supported species.</p>
+        <h2 class="box-header">Ensembl  Release 95 (January 2019)</h2><ul>
+<li>New regulatory build for human, incorporating new data from ENCODE</li>
+<li>Update to GENCODE M20 for mouse</li>
+<li>New genomes: donkey, polar bear, black bear, red fox, koala, dingo, tuatara, painted turtle and desert tortoise</li>
+<li>Updated genomes for chicken, cow and horse</li>
+<li>New protein structure variation view</li>
+</ul>
+<p class="right"><a href="http://www.ensembl.info/category/01-release/">More release news</a> on our blog</p><h2 class="box-header">Other news from our blog</h2><ul><li>25 Jan 2019: <a href="http://www.ensembl.info/2019/01/25/cool-stuff-the-ensembl-vep-can-do-highlighting-likely-causal-gwas-variants-with-postgap/">Cool stuff the Ensembl VEP can do: highlighting likely causal GWAS variants with PostGAP</a></li><li>18 Jan 2019: <a href="http://www.ensembl.info/2019/01/18/job-ensembl-compara-project-leader/">Job: Ensembl Compara Project Leader</a></li><li>18 Jan 2019: <a href="http://www.ensembl.info/2019/01/18/retirement-of-ensembl-archive-74/">Retirement of Ensembl archive 74</a></li></ul>
+
+<!-- BEGIN: VF 2.0 sample -->
+<!-- Jobs feed import -->
+<link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?pattern=vf-jobs-snippet&filter-content-type=jobs&filter-field-contains[field_jobs_description]=protein&filter-field-date-after[field_jobs_expiration]=today&limit=3&amp;source=contenthub" data-target="self" data-embl-js-content-hub-loader="">
+<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/components/raw/vf-summary/vf-summary.css">
+<!-- END: VF 2.0 sample -->
+
+
+      </div>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="grid-col-1">
+      <div class="plain-box tool-box">
+        <a href="/info/website/tutorials/compara.html" class="nodeco"><span><b>Compare genes across species</b></span><span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="width: 96px;height: 64px;background-position: -627px -465px;background-size: 1000px 794px" /></span></a>
+      </div>
+    </div>
+    <div class="grid-col-1">
+      <div class="plain-box tool-box">
+        <a href="/info/website/tutorials/gene_snps.html" class="nodeco"><span><b>Find SNPs and other variants for my gene</b></span><span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-jpg " style="background-size: 1000px 218px;background-position: -357px -3px;height: 64px;width: 96px" /></span></a>
+      </div>
+    </div>
+    <div class="grid-col-1">
+      <div class="plain-box tool-box">
+        <a href="/info/website/tutorials/expression.html" class="nodeco"><span><b>Gene expression in different tissues</b></span><span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-jpg " style="background-size: 1000px 218px;background-position: -561px -3px;height: 64px;width: 96px" /></span></a>
+      </div>
+    </div>
+    <div class="grid-col-1">
+      <div class="plain-box tool-box">
+        <a href="/info/website/tutorials/sequence.html" class="nodeco"><span><b>Retrieve gene sequence</b></span><span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-jpg " style="width: 96px;height: 64px;background-position: -459px -3px;background-size: 1000px 218px" /></span></a>
+      </div>
+    </div>
+    <div class="grid-col-1">
+      <div class="plain-box tool-box">
+        <a href="/info/website/gallery.html"><span><b>Find a Data Display</b><span>
+        <span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="width: 80px;background-size: 625px 496.25px;height: 60px;background-position: -132.5px -431.875px" alt="signpost"/></span></a>
+      </div>
+    </div>
+    <div class="grid-col-1">
+      <div class="plain-box tool-box tool-box-last">
+        <a href="/info/website/tutorials/userdata.html" class="nodeco"><span><b>Use my own data in Ensembl</b></span><span><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-jpg " style="background-position: -255px -3px;height: 64px;background-size: 1000px 218px;width: 96px" /></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="column-wrapper footer-ack">
+  <div class="plain-box unbordered">
+      <p>
+<a href="http://www.ebi.ac.uk"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png float-left ebi-logo" style="background-position: -159.5px -232.5px;height: 31px;background-size: 500px 397px;width: 100px" alt="EMBL-EBI" title="European BioInformatics Institute"/></a>
+<a href="https://www.elixir-europe.org/platforms/data/core-data-resources"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png float-right" style="width: 100px;height: 73px;background-position: -371px -605px;background-size: 1000px 794px" alt="Elixir logo"/></a>
+  Ensembl creates, integrates and distributes reference datasets and analysis tools that enable genomics. We are based at <a href="http://www.ebi.ac.uk/" rel="external">EMBL-EBI</a> and our software and data are freely available.</p>
+<p>Our <a href="/info/about/credits.html">acknowledgements page</a> includes a list of current and previous funding bodies. <a href="/info/about/publications.html">How to cite Ensembl</a> in your own publications.</p>
+
+
+  </div>
+</div>
+
+</div>
+
+      </div>
+
+        <div id="wide-footer">
+          <div class="column-wrapper">
+    <div class="column-two left">
+      <p>Ensembl release 95 - January 2019 &copy;
+        <span class="print_hide"><a href="http://www.ebi.ac.uk/" class="nowrap constant">EMBL-EBI</a></span>
+        <span class="screen_hide_inline">EMBL-EBI<br />http://www.ensembl.org</span>
+      </p>
+
+    </div>
+    <div class="column-two right print_hide"><p>
+        <a class="modal_link" id="p_link" href="/Help/Permalink?url=http%3A%2F%2FJan2019.archive.ensembl.org">Permanent link</a>
+     - <a class="modal_link" id="a_link" href="/Help/ArchiveList">View in archive site</a></p></div>
+            <p class="invisible">.</p>
+          </div>
+          <div class="column-wrapper"><hr /><div id="fat-footer">
+              <div class="column-four left">
+                <h3>About Us</h3>
+                <p><a href="/info/about">About us</a></p>
+                <p><a href="/info/about/contact/">Contact us</a></p>
+                <p><a href="/info/about/publications.html">Citing Ensembl</a></p>
+                <p><a href="https://www.ebi.ac.uk/data-protection/ensembl/privacy-notice">Privacy policy</a></p>
+                <p><a href="/info/about/legal/">Disclaimer</a></p>
+              </div>
+
+              <div class="column-four left">
+                <h3>Get help</h3>
+                <p><a href="/info/website/">Using this website</a></p>
+                <p><a href="/info/website/upload">Adding custom tracks</a></p>
+                <p><a href="/downloads.html">Downloading data</a></p>
+                <p><a href="/info/website/tutorials/">Video tutorials</a></p>
+                <p><a href="/info/docs/tools/vep/">Variant Effect Predictor (VEP)</a></p>
+              </div>
+
+              <div class="column-four left">
+                <h3>Our sister sites</h3>
+                <p><a href="http://bacteria.ensembl.org">Ensembl Bacteria</a></p>
+                <p><a href="http://fungi.ensembl.org">Ensembl Fungi</a></p>
+                <p><a href="http://plants.ensembl.org">Ensembl Plants</a></p>
+                <p><a href="http://protists.ensembl.org">Ensembl Protists</a></p>
+                <p><a href="http://metazoa.ensembl.org">Ensembl Metazoa</a></p>
+              </div>
+
+              <div class="column-four left">
+                <h3>Follow us</h3>
+                <p><a class="media-icon" href="http://www.ensembl.info/">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="width: 16px;background-size: 1000px 794px;height: 16px;background-position: -754px -47px" alt="[RSS logo]" title="Ensembl blog"/></a>
+                  <a href="http://www.ensembl.info/">Blog</a></p>
+                <p><a class="media-icon" href="http://www.twitter.com/Ensembl">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="width: 20px;background-size: 1000px 794px;height: 16px;background-position: -324px -69px" alt="[twitter logo]" title="Follow us on Twitter!"/></a>
+                    <a href="http://www.twitter.com/ensembl">Twitter</a></p>
+                <p><a class="media-icon" href="http://www.facebook.com/Ensembl.org">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png " style="width: 16px;height: 16px;background-position: -578px -47px;background-size: 1000px 794px" alt="[Facebook logo]" title="Our Facebook page"/></a>
+                  <a href="http://www.facebook.com/Ensembl.org">Facebook</a></p>
+              </div>
+  </div>
+            <p class="invisible">.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <form id="core_params" action="#" style="display:none">
+    <fieldset><input type="hidden" name="db" value="core" /></fieldset>
+  </form>
+  <input type="hidden" id="species_path" name="species_path" value="" />
+  <input type="hidden" id="gdpr_version" name="gdpr_version" value="2.0.0" />
+  <input type="hidden" id="gdpr_policy_url" name="gdpr_policy_url" value="https://www.ebi.ac.uk/data-protection/ensembl/privacy-notice" />
+  <input type="hidden" id="gdpr_terms_url" name="gdpr_terms_url" value="https://www.ebi.ac.uk/about/terms-of-use" />
+  <input type="hidden" id="gdpr_cookie_name" name="gdpr_cookie_name" value="ENSEMBL_PRIVACY_POLICY" />
+  <input type="hidden" id="species_common_name" name="species_common_name" value="Human" />
+  <input type="hidden" id="ensembl_image_root" name="ensembl_image_root" value="/i/" />
+  <input type="hidden" id="max_region_length" name="max_region_length" value="1000100" />
+
+  <div id="modal_bg"></div>
+  <div id="modal_panel" class="js_panel">
+    <input type="hidden" class="panel_type" value="ModalContainer" />
+    <div class="modal_title">
+      <ul class="tabs">
+        <li><a class="modal_user_data" href="UserData/ManageData?time=1548415323">Personal Data</a></li>
+      </ul>
+      <div class="modal_caption"></div>
+      <div class="modal_close"></div>
+    </div>
+    <div id="modal_user_data" class="modal_content js_panel fixed_width" style="display:none"></div>
+    <div id="modal_default" class="modal_content js_panel fixed_width" style="display:none"></div>
+    <div class="modal_overlay"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="autosprite-src-default-png overlay_close" style="width: 20px;height: 20px;background-position: -572px -115px;background-size: 1000px 794px" alt="close" title="Cancel"/><div class="overlay_content"></div></div>
+    <div class="modal_overlay_bg"></div>
+  </div>
+
+
+    <script type="text/javascript" src="//static.ensembl.org/minified/bb8f3d8756ef0e611da62fa241cd4de1.js"></script>
+<script type="text/javascript" src="//static.ensembl.org/minified/299b4bd64e96571c37b08b0f6a6feb5c.js"></script>
+
+  <input type="hidden" id="hidden_species_list" name="hidden_species_list" value=Paramormyrops_kingsleyae|Echinops_telfairi|Procavia_capensis|Amphiprion_percula|Macaca_fascicularis|Astatotilapia_calliptera|Mus_musculus_WSB_EiJ|Saccharomyces_cerevisiae|Canis_familiaris|Cavia_aperea|Poecilia_mexicana|Xiphophorus_couchianus|Mus_musculus_DBA_2J|Ornithorhynchus_anatinus|Jaculus_jaculus|Erinaceus_europaeus|Cricetulus_griseus_crigri|Capra_hircus|Stegastes_partitus|Danio_rerio|Kryptolebias_marmoratus|Fundulus_heteroclitus|Labrus_bergylta|Drosophila_melanogaster|Octodon_degus|Ictidomys_tridecemlineatus|Mus_musculus_C57BL_6NJ|Mus_musculus_C3H_HeJ|Carlito_syrichta|Ochotona_princeps|Rhinopithecus_bieti|Mola_mola|Meleagris_gallopavo|Ovis_aries|Saimiri_boliviensis_boliviensis|Seriola_dumerili|Ailuropoda_melanoleuca|Caenorhabditis_elegans|Ficedula_albicollis|Poecilia_formosa|Eptatretus_burgeri|Dipodomys_ordii|Esox_lucius|Pan_paniscus|Otolemur_garnettii|Macaca_nemestrina|Xenopus_tropicalis|Callithrix_jacchus|Equus_caballus|Ictalurus_punctatus|Gambusia_affinis|Microcebus_murinus|Pteropus_vampyrus|Sphenodon_punctatus|Scophthalmus_maximus|Mus_caroli|Oryzias_latipes_hsok|Gasterosteus_aculeatus|Amphiprion_ocellaris|Cricetulus_griseus_chok1gshd|Acanthochromis_polyacanthus|Periophthalmus_magnuspinnatus|Equus_asinus_asinus|Notamacropus_eugenii|Bos_taurus|Ursus_maritimus|Amphilophus_citrinellus|Mus_musculus_A_J|Papio_anubis|Mus_musculus_CAST_EiJ|Xiphophorus_maculatus|Chlorocebus_sabaeus|Heterocephalus_glaber_male|Panthera_pardus|Rhinopithecus_roxellana|Chinchilla_lanigera|Heterocephalus_glaber_female|Mus_musculus_CBA_J|Ursus_americanus|Mus_musculus_BALB_cJ|Nomascus_leucogenys|Mus_musculus|Monopterus_albus|Gallus_gallus|Mus_musculus_LP_J|Canis_lupus_dingo|Chrysemys_picta_bellii|Scleropages_formosus|Poecilia_latipinna|Sus_scrofa|Myotis_lucifugus|Neolamprologus_brichardi|Lepisosteus_oculatus|Cynoglossus_semilaevis|Mus_pahari|Gadus_morhua|Taeniopygia_guttata|Tursiops_truncatus|Homo_sapiens|Choloepus_hoffmanni|Aotus_nancymaae|Mus_musculus_NZO_HlLtJ|Microtus_ochrogaster|Mus_musculus_PWK_PhJ|Vicugna_pacos|Latimeria_chalumnae|Sarcophilus_harrisii|Cyprinodon_variegatus|Takifugu_rubripes|Sorex_araneus|Gorilla_gorilla|Nannospalax_galili|Tetraodon_nigroviridis|Monodelphis_domestica|Pongo_abelii|Haplochromis_burtoni|Ciona_savignyi|Cebus_capucinus|Hippocampus_comes|Propithecus_coquereli|Fukomys_damarensis|Mus_musculus_NOD_ShiLtJ|Mesocricetus_auratus|Felis_catus|Petromyzon_marinus|Oryzias_latipes|Tupaia_belangeri|Oreochromis_niloticus|Pan_troglodytes|Anolis_carolinensis|Pelodiscus_sinensis|Macaca_mulatta|Pundamilia_nyererei|Ciona_intestinalis|Mus_musculus_129S1_SvImJ|Cavia_porcellus|Rattus_norvegicus|Anas_platyrhynchos|Cercocebus_atys|Oryctolagus_cuniculus|Dasypus_novemcinctus|Anabas_testudineus|Oryzias_latipes_hni|Loxodonta_africana|Mastacembelus_armatus|Panthera_tigris_altaica|Mus_musculus_AKR_J|Poecilia_reticulata|Mandrillus_leucophaeus|Seriola_lalandi_dorsalis|Gopherus_agassizii|Mus_spretus|Astyanax_mexicanus|Pygocentrus_nattereri|Mustela_putorius_furo|Colobus_angolensis_palliatus|Oryzias_melastigma|Peromyscus_maniculatus_bairdii|Maylandia_zebra|Phascolarctos_cinereus|Mus_musculus_FVB_NJ|Vulpes_vulpes>
+
+  <!-- BEGIN: VF 2.0 sample -->
+  <!-- Data protection banner -->
+  <link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=581&pattern=node-body&amp;source=contenthub" data-target="self" data-embl-js-content-hub-loader>
+  <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/components/raw/vf-banner/vf-banner.css">
+
+  <!-- dismissible banner -->
+  <div class="vf-banner vf-banner--fixed vf-banner--bottom vf-banner--notice" data-vf-js-banner data-vf-js-banner-state="dismissible" data-vf-js-banner-button-text="Close this" data-vf-js-banner-cookie-name="MyServiceTest" data-vf-js-banner-cookie-version="0.1"
+      data-vf-js-banner-extra-button="<a href='#'>Optional button</a><a target='_blank' href='#'>New tab button</a>" data-vf-js-banner-auto-accept="false">
+      <div class="vf-banner__content | vf-grid" data-vf-js-banner-text>
+          <p class="vf-text vf-text--body-l">
+              A custom notification.
+          </p>
+      </div>
+  </div>
+  <!-- END: VF 2.0 sample -->
+
+  <script src="https://dev.assets.emblstatic.net/vf/scripts/scripts.js"></script>
+  <!-- <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/css/styles.css"> -->
+
+
+</body>
+</html>

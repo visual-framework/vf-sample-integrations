@@ -1,0 +1,637 @@
+
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!-- START: default Drupal Head Metatags -->
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="http://www.ebi.ac.uk/pdbe/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="/pdbe/node/1" />
+<link rel="canonical" href="/pdbe/node/1" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<!-- END: default Drupal Head Metatags -->
+
+  <title>PDBe home &lt; Node &lt; EMBL-EBI</title>
+  <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css">
+  <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/files/css/css_hFPQ1m8ZuNKOOI8QwFmOEu50OW5oqwMbwRuVWMWp4QM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/files/css/css_EPsgvacVXxxhwhLr4DGj8P1D4es4L_QnnRJPHn_TJHE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/files/css/css_USCIZ8EHFaP-C3-tbsg3h4-vzEIOfwsPHnwRDS7B6B0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/files/css/css_LqNYv5ALuJ1btsjJ-Ho-ClFSEiILYopJry33LOSC7qY.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl-noboilerplate.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/pdbe-green-colours.css" type="text/css" media="screen">
+    <link type="text/css" rel="stylesheet" href="/pdbe/css/pdbe_main.css" media="all" />
+    <!-- end CSS-->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+
+  <!-- Full build -->
+  <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script> -->
+
+  <!-- custom build (lacks most of the "advanced" HTML5 support -->
+  <script type="text/javascript" src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script>
+  <script type="text/javascript" src="//www.ebi.ac.uk/pdbe/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="//www.ebi.ac.uk/pdbe/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="//www.ebi.ac.uk/pdbe/misc/drupal.js?plv3dm"></script>
+<script type="text/javascript" src="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/libraries/tinymce/jscripts/tiny_mce/plugins/media/js/embed.js?plv3dm"></script>
+<script type="text/javascript" src="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/modules/contrib/google_analytics/googleanalytics.js?plv3dm"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-47787314-1", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/modules/custom/ebi_addthis/ebi_addthis.js?plv3dm"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/pdbe\/","pathPrefix":"","ajaxPageState":{"theme":"ebicompliance","theme_token":"1ufyOP2gTG5K_gwOM2rD6XFc08LKJZ9fSyBhl4EB980","js":{"0":1,"1":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/ebi.ac.uk.pdbe\/libraries\/tinymce\/jscripts\/tiny_mce\/plugins\/media\/js\/embed.js":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/ebi.ac.uk.pdbe\/modules\/custom\/ebi_addthis\/ebi_addthis.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/views\/css\/views.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/contrib\/panels\/plugins\/layouts\/flexible\/flexible.css":1,"public:\/\/ctools\/css\/3b883633b968662db5a3cbb6f8a01427.css":1,"public:\/\/ctools\/css\/64f62b62176c588cafa758569b06b89b.css":1,"sites\/ebi.ac.uk.pdbe\/modules\/custom\/ebi_addthis\/ebi_addthis.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-events.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-rdf.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-pdbe.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-ega.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-eva.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-industry.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-intranet.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/ebi-training.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/calendar_multiday.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/drupal-reset.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/header-banners.css":1,"sites\/ebi.ac.uk.pdbe\/themes\/custom\/ebicompliance\/css\/style.css":1}},"ebi_addthis":{"title":"PDBe home","script_url":"\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=ra-5017dfbd59a8b9f0","pubid":"pubid=ra-5017dfbd59a8b9f0","configuration":""},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+  <script type="text/javascript">jQuery(document).ready(function($){$('a img').each(function(id){$(this.parentNode).addClass('no-underline')})});</script>
+</head>
+
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-panel role-anonymous-user user-0 page-node-1 subdomain-none subsite-pdbe level2 datacentre-pg environment-prod">
+
+<!-- page_top -->
+    <!-- page -->
+      <div id="skip-to">
+		<ul>
+			<li><a href="#content">Skip to main content</a></li>
+			<li><a href="#local-nav">Skip to local navigation</a></li>
+			<li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+			<li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+		</ul>
+	</div>
+
+
+  <div id="wrapper" class="container_24 page">
+    <header>
+    	<div id="global-masthead" class="masthead grid_24">
+      <!--This has to be one line and no newline characters-->
+			<a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute"></a>
+
+			<nav>
+        <ul id="global-nav"><li class="menu-266 menu-services  active-trail" id="services"><a href="//www.ebi.ac.uk/services" title="">Services</a></li>
+<li class="menu-267 menu-research " id="research"><a href="//www.ebi.ac.uk/research" title="">Research</a></li>
+<li class="menu-270 menu-training " id="training"><a href="//www.ebi.ac.uk/training" title="">Training</a></li>
+<li class="menu-268 menu-industry " id="industry"><a href="//www.ebi.ac.uk/industry" title="">Industry</a></li>
+<li class="menu-269 menu-about-us " id="about-us"><a href="//www.ebi.ac.uk/about" title="">About us</a></li>
+</ul>			</nav>
+
+		</div>
+
+		<div id="local-masthead" class="masthead grid_24 nomenu">
+			      <div class="grid_12 alpha" id="local-title">
+
+  <!--
+-->
+
+  <div class="content">
+    <a href='/pdbe' title='Back to PDBe homepage'><img src='//www.ebi.ac.uk/pdbe/static/images/logos/PDBe/logo.png' alt='PDBe logo' height='64'></a> <span> <h1><a href='/pdbe' title='Back to PDBe homepage'>Protein&nbsp;Data&nbsp;Bank&nbsp;in&nbsp;Europe</a></h1> <br> <p>Bringing&nbsp;Structure&nbsp;to&nbsp;Biology</p> </span>  </div>
+
+			</div>
+
+						<div class="grid_12 omega" id="local-search">
+
+  <!--
+-->
+
+  <div class="content">
+    <form id='local-search' name='local-search' action='/pdbe/entry/search/index' method='get' onsubmit='submit_search(this); return false; ' onkeypress='return event.keyCode != 13;'><fieldset><div class='left'><label id='search'><input type='text' name='fq' id='local-searchbox'></label><span class='examples'>Examples: <a href="/pdbe/entry/search/index?text:hemoglobin">hemoglobin</a>, <a href="/pdbe/entry/search/index?text:BRCA1_HUMAN">BRCA1_HUMAN</a></span></div><div class='right'><input type='submit' name='submit' value='Search' class='submit'><span class='adv'><a href='/pdbe/entry/search/index/?advancedSearch:true' id='adv-search' title='Advanced'>Advanced</a></span></div></fieldset></form>  </div>
+
+			</div>
+
+			      <nav>
+				<ul id="local-nav" class="grid_24"><li class="menu-299 menu-pdbe-home active " id="pdbe-home"><a href="/pdbe/" title="PDBe home" class="active">PDBe home</a></li>
+<li class="menu-434 menu-deposition " id="deposition"><a href="/pdbe/deposition">Deposition</a></li>
+<li class="menu-433 menu-pdbe-services " id="pdbe-services"><a href="/pdbe/services">PDBe services</a></li>
+<li class="menu-472 menu-pdbe-training " id="pdbe-training"><a href="/pdbe/training">PDBe training</a></li>
+<li class="menu-335 menu-documentation " id="documentation"><a href="/pdbe/documentation">Documentation</a></li>
+<li class="menu-362 menu-about-pdbe " id="about-pdbe"><a href="/pdbe/about">About PDBe</a></li>
+<li class="menu-412 menu-feedback functional " id="feedback"><a href="//www.ebi.ac.uk/support/pdbe" class="icon icon-generic" data-icon="\">Feedback</a></li>
+</ul>			</nav>
+
+
+		</div>
+    </header>
+
+    <div id="content" role="main" class="grid_24 clearfix">
+
+    <!-- Suggested layout containers -->
+
+
+
+
+        <section class="grid_24">
+
+
+  <div class="content">
+    <div id="node-1" class="node node-panel node-promoted clearfix" about="/pdbe/node/1" typeof="sioc:Item foaf:Document">
+
+
+      <span property="dc:title" content="PDBe home" class="rdf-meta element-hidden"></span>
+
+  <div class="content">
+    <div class="panels-flexible-row panels-flexible-row-basic_layout-9 panels-flexible-row-first clearfix ">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-top ">
+</div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-basic_layout-3 clearfix ">
+<div class="panels-flexible-column panels-flexible-column-basic_layout-4 grid_16 alpha panels-flexible-column-first reset_100">
+<div class="panels-flexible-row panels-flexible-row-basic_layout-6 panels-flexible-row-first clearfix ">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-main_ ">
+<div class="panel-pane pane-custom pane-1 clearfix" >
+
+
+
+<!--   <div class="pane-content"> -->
+
+<p>PDBe is the European resource for the collection, organisation and dissemination of data on biological macromolecular structures. <a href="//www.ebi.ac.uk/pdbe/about">Read more about PDBe</a>.</p>
+<!--   </div> -->
+
+
+  </div>
+<div class="panel-separator"></div><div id="intro"><div class="panel-pane pane-views pane-fa-test clearfix" >
+
+        <h3 class="pane-title">Featured structure</h3>
+
+
+<!--   <div class="pane-content"> -->
+    <div class="view view-fa-test view-id-fa_test view-display-id-block_1 view-dom-id-12372c8c98f61c27b375eeb3c5f33b27">
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1">
+    <div class="panels-flexible-row panels-flexible-row-featurednewsitem-main-row panels-flexible-row-first clearfix">
+<div class="panels-flexible-region panels-flexible-region-featurednewsitem-center ">
+
+  <div class="views-field views-field-title">        <h5 class="field-content"><a href="/pdbe/about/news/connection">Connection</a></h5>  </div></div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-featurednewsitem-1 panels-flexible-row-last clearfix ">
+<div class="panels-flexible-region panels-flexible-region-featurednewsitem-padding grid_1 alpha panels-flexible-region-first ">
+</div>
+<div class="panels-flexible-region panels-flexible-region-featurednewsitem-feature_image grid_6 feature-image">
+
+  <span class="views-field views-field-field-news-image">        <span class="field-content"><span><img typeof="foaf:Image" src="//www.ebi.ac.uk/pdbe/sites/ebi.ac.uk.pdbe/files/styles/220x165/public/news-images/January_connection_small.png?itok=og6GQ9af" width="220" height="155" alt="Painting of two people looking at each other, with protein behind them" title="Connection" /></span></span>  </span></div>
+<div class="panels-flexible-region panels-flexible-region-featurednewsitem-feature_body grid_17 omega panels-flexible-region-last feature-body">
+
+  <span class="views-field views-field-field-news-summary">        <span class="field-content">
+<p style="text-align: right;">1st January 2019</p>
+<p>The new <a href="//www.ebi.ac.uk/pdbe/about/news/2019-calendar-science-and-society">PDBe calendar for 2019</a> starts with an image representing the connection and communication between nerve cells mediated by the AMPA-type glutamate receptor.</p>
+<p><a href="//www.ebi.ac.uk/pdbe/about/news/connection">Read more...</a></p>
+</span>  </span></div>
+</div>
+  </div>
+    </div>
+
+
+
+
+      <div class="view-footer">
+
+<p><a href="//www.ebi.ac.uk/pdbe/featured-structures">Previous featured structures</a></p>
+    </div>
+
+
+</div><!--   </div> -->
+
+
+  </div>
+</div></div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-basic_layout-7 clearfix ">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-left grid_12 alpha panels-flexible-region-first reset_100">
+<div class="panel-pane pane-views pane-news-summary clearfix" >
+
+        <h3 class="pane-title">News</h3>
+
+
+<!--   <div class="pane-content"> -->
+    <div class="view view-news-summary view-id-news_summary view-display-id-block_1 view-dom-id-2c2a4668e6764f402b8a3d260a046828">
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+
+  <h4 class="news-title">        <a href="/pdbe/about/news/2019-calendar-science-and-society">2019 calendar: Science and Society</a>  </h4>
+  <p class="news-date">        11 December, 2018  </p>  </div>
+  <div class="views-row views-row-2 views-row-even">
+
+  <h4 class="news-title">        <a href="/pdbe/about/news/successful-hackathon-bioexcel-partners">A successful Hackathon with BioExcel partners</a>  </h4>
+  <p class="news-date">        10 December, 2018  </p>  </div>
+  <div class="views-row views-row-3 views-row-odd">
+
+  <h4 class="news-title">        <a href="/pdbe/about/news/new-publication-global-wwpdb-consortium">New publication from the global wwPDB consortium</a>  </h4>
+  <p class="news-date">        5 December, 2018  </p>  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+
+  <h4 class="news-title">        <a href="/pdbe/about/news/bringing-clarity-chemistry-pdbe">Bringing clarity to chemistry at PDBe</a>  </h4>
+  <p class="news-date">        1 November, 2018  </p>  </div>
+    </div>
+
+
+
+
+      <div class="view-footer">
+
+<p><a href="//www.ebi.ac.uk/pdbe/about/news">More news</a></p>
+    </div>
+
+
+</div><!--   </div> -->
+
+
+  </div>
+</div>
+<div class="panels-flexible-region panels-flexible-region-basic_layout-center grid_12 omega panels-flexible-region-last reset_100">
+<div class="panel-pane pane-views pane-event-summary clearfix" >
+
+        <h3 class="pane-title">Events</h3>
+
+
+<!--   <div class="pane-content"> -->
+    <div class="view view-event-summary view-id-event_summary view-display-id-block_1 view-dom-id-402a5c69b6322ce5700024c06a05df7d">
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+
+  <div>        <h4 class="event-title"><a href="/pdbe/about/events/teachers-workshop-collaboration-cbm">Teachers workshop in collaboration with CBM</a></h4>  </div>
+          <span><section><div><strong>EMBL-EBI, Wellcome Genome Campus, Cambridge, UK</strong></div></span>
+          <span><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-02-08T00:00:00+00:00">8 Feb 2019</span><br><br><br></section></span>    </div>
+  <div class="views-row views-row-2 views-row-even">
+
+  <div>        <h4 class="event-title"><a href="/pdbe/about/events/embl-ebi-workshop-university-pavia">EMBL-EBI workshop at the University of Pavia</a></h4>  </div>
+          <span><section><div><strong>Pavia, Italy</strong></div></span>
+          <span><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-02-21T00:00:00+00:00">21 Feb 2019</span><br><br><br></section></span>    </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+
+  <div>        <h4 class="event-title"><a href="/pdbe/about/events/bioinformatics-resources-protein-biology-0">Bioinformatics resources for protein biology</a></h4>  </div>
+          <span><section><div><strong>EMBL-EBI, Wellcome Genome Campus, Cambridge, UK</strong></div></span>
+          <span><span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2019-02-27T00:00:00+00:00">27 Feb 2019</span><br><br><br></section></span>    </div>
+    </div>
+
+
+
+
+      <div class="view-footer">
+
+<p><a href="//www.ebi.ac.uk/pdbe/about/events">More events</a></p>
+    </div>
+
+
+</div><!--   </div> -->
+
+
+  </div>
+</div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-basic_layout-10 clearfix ">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-main2 ">
+<div class="panel-pane pane-views-panes pane-publications-panel-pane-2 clearfix" >
+
+        <h3 class="pane-title">Publications</h3>
+
+
+<!--   <div class="pane-content"> -->
+    <div class="view view-publications view-id-publications view-display-id-panel_pane_2 view-dom-id-7d43169afb5780036684bed90d6064ba">
+
+
+
+      <div class="view-content">
+        <div>
+
+  <div>        <span><h4><a href="http://europepmc.org/abstract/MED/30445555">The SUPERFAMILY 2.0 database: a significant proteome update and a new webserver.</a></h4></span>  </div>
+  <p>        <span>Pandurangan AP, Stahlhacke J, Oates ME, Smithers B, Gough J.<br /><i>Nucleic acids research</i> Volume 47 (2019) p.D490-D494</span>  </p>  </div>
+  <div>
+
+  <div>        <span><h4><a href="http://europepmc.org/abstract/MED/30445541">SIFTS: updated Structure Integration with Function, Taxonomy and Sequences resource allows 40-fold increase in coverage of structure-based annotations for proteins.</a></h4></span>  </div>
+  <p>        <span>Dana JM, Gutmanas A, Tyagi N, Qi G, O&#039;Donovan C, Martin M, Velankar S.<br /><i>Nucleic acids research</i> Volume 47 (2019) p.D482-D489</span>  </p>  </div>
+  <div>
+
+  <div>        <span><h4><a href="http://europepmc.org/abstract/MED/30395287">UniProt: a worldwide hub of protein knowledge.</a></h4></span>  </div>
+  <p>        <span>UniProt Consortium.<br /><i>Nucleic acids research</i> Volume 47 (2019) p.D506-D515</span>  </p>  </div>
+    </div>
+
+
+
+
+      <div class="view-footer">
+
+<p><a href="//www.ebi.ac.uk/pdbe/about/publications">More publications</a></p>
+    </div>
+
+
+</div><!--   </div> -->
+
+
+  </div>
+</div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-basic_layout-11 clearfix ">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-left_3 grid_8 alpha panels-flexible-region-first reset_100">
+</div>
+<div class="panels-flexible-region panels-flexible-region-basic_layout-middle_3 grid_8 reset_100">
+</div>
+<div class="panels-flexible-region panels-flexible-region-basic_layout-right_3 grid_8 omega panels-flexible-region-last reset_100">
+</div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-basic_layout-12 panels-flexible-row-last clearfix main3">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-main3 ">
+</div>
+</div>
+</div>
+<div class="panels-flexible-column panels-flexible-column-basic_layout-5 grid_8 omega panels-flexible-column-last reset_100">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-sidebar ">
+<div class="shortcuts transparent"><div class="panel-pane pane-custom pane-2 clearfix" >
+
+        <h3 class="pane-title">Popular</h3>
+
+
+<!--   <div class="pane-content"> -->
+
+<ul class="split">
+<li><a href="//www.ebi.ac.uk/pdbe/emdb/searchForm.html" class='icon icon-generic' data-icon='('>EMsearch</a></li>
+<li><a href="//pdbe.org/fold" class='icon icon-generic' data-icon='('>PDBeFold</a></li>
+<li><a href="//pdbe.org/pisa" class='icon icon-generic' data-icon='('>PDBePISA</a></li>
+<li><a href="//pdbe.org/chem" class='icon icon-generic' data-icon='('>PDBeChem</a></li>
+<li><a href="//pdbe.org/fasta" class='icon icon-generic' data-icon='('>Sequence search</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/pdbe-rest-api" class='icon icon-generic' data-icon='('>PDBe REST API</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/emdb/" class='icon icon-generic' data-icon='('>EM resources</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/nmr-resources" class='icon icon-generic' data-icon='('>NMR resources</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/emdb/empiar/" class='icon icon-generic' data-icon='('>EMPIAR</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/coordinates/index.html" class='icon icon-generic' data-icon='('>Coordinate Server</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/pdb-component-library/index.html" class='icon icon-generic' data-icon='('>PDB Component Library</a> </li>
+</ul>
+<ul class="split">
+<li><a href="//www.ebi.ac.uk/pdbe/about/news" class='icon icon-generic' data-icon='N'>News</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/about/events" class='icon icon-generic' data-icon='r'>Events</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/training" class='icon icon-generic' data-icon='T'>Training</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/about/contact" class='icon icon-generic' data-icon='C'>Contact us</a></li>
+</ul>
+<!--   </div> -->
+
+
+  </div>
+</div><div class="panel-separator"></div><div class="shortcuts transparent"><div class="panel-pane pane-views pane-latest-archive-statistics clearfix" >
+
+        <h3 class="pane-title">Latest archive statistics</h3>
+
+
+<!--   <div class="pane-content"> -->
+    <div class="view view-latest-archive-statistics view-id-latest_archive_statistics view-display-id-default view-dom-id-5581557fa4462c44eb3185a6d41e116d">
+
+
+
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+  <div class="views-field views-field-nothing">        <span class="field-content"><p>As of 23 January 2019 the PDB contains 148268 entries (<a href="/pdbe/entry/search/index?document_type:latest_pdb&amp;view=entry&amp;sort=release_date+desc">latest PDB entries</a>, <a href="/pdbe/entry/search/index?document_type:latest_chemistry&amp;view=compounds">chemistry</a>, <a href="/pdbe/entry/search/index?document_type:latest_biology&amp;view=entry">biology</a>) and EMDB contains 7449 entries (<a href="/pdbe/emdb/release/map/">latest map releases</a>, <a href="/pdbe/emdb/release/header/">latest header releases</a>, <a href="/pdbe/emdb/release/update/">latest updates</a>). </span>  </div>  </div>
+    </div>
+
+
+
+
+
+
+</div><!--   </div> -->
+
+
+  </div>
+</div>
+
+<div class="shortcuts transparent"><div class="panel-pane pane-views pane-latest-archive-statistics clearfix" >
+	<h3 class="pane-title">Latest jobs</h3>
+<!-- BEGIN: VF 2.0 sample -->
+<!-- Jobs feed import -->
+<link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?pattern=vf-jobs-snippet&filter-content-type=jobs&filter-field-contains[field_jobs_description]=protein&filter-field-date-after[field_jobs_expiration]=today&limit=3&amp;source=contenthub" data-target="self" data-embl-js-content-hub-loader="">
+<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/components/raw/vf-summary/vf-summary.css">
+<!-- END: VF 2.0 sample -->
+</div>
+
+
+
+<div class="panel-separator"></div><div class="shortcuts transparent"><div class="panel-pane pane-custom pane-3 clearfix" >
+
+
+
+<!--   <div class="pane-content"> -->
+    <p><a class="twitter-timeline" data-dnt="true" href="https://twitter.com/PDBeurope" data-widget-id="421604235533221888">Tweets by @PDBeurope</a></p>
+<script>
+<!--//--><![CDATA[// ><!--
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+//--><!]]>
+</script><!--   </div> -->
+
+
+  </div>
+</div><div class="panel-separator"></div><div class="shortcuts transparent"><div class="panel-pane pane-custom pane-4 clearfix" >
+
+        <h3 class="pane-title">Connect with us</h3>
+
+
+<!--   <div class="pane-content"> -->
+
+<ul class="split">
+<li><a href="//www.facebook.com/proteindatabank" class='icon icon-socialmedia' data-icon='F'>Facebook</a></li>
+<li><a href="//twitter.com/PDBeurope" class='icon icon-socialmedia' data-icon='T'>Twitter</a></li>
+</ul>
+<ul class="split">
+<li><a href="//www.youtube.com/user/ProteinDataBank" class='icon icon-socialmedia' data-icon='Y'>YouTube</a></li>
+<li><a href="//www.ebi.ac.uk/pdbe/rss-feeds" class='icon icon-socialmedia' data-icon='R'>RSS</a></li>
+</ul>
+<!--   </div> -->
+
+
+  </div>
+</div></div>
+</div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-basic_layout-2 panels-flexible-row-last clearfix ">
+<div class="panels-flexible-region panels-flexible-region-basic_layout-bottom ">
+</div>
+</div>
+  </div>
+
+
+
+</div>
+  </div>
+
+      		</section>
+
+
+    		<!-- End suggested layout containers -->
+
+    </div>
+
+    <footer>
+
+  	<!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <div id="local-footer" class="grid_24 clearfix">
+
+
+  <div class="content">
+    <p><img src="/pdbe/static/images/logos/PDBe/pdbe-logo-2013.png" alt="Protein Data Bank in Europe (PDBe)" style="width: 90px; bacground: #fff; margin 7px 0" /> <span style="line-height: 2;text-align: center;padding: 0 12px; font-size: 138.5%; color: #666;">is a member of</span> <a title="Go to the wwPDB homepage" href="http://www.wwpdb.org" target="_wwpdb"><img src="/pdbe/static/images/logos/wwPDB/wwpdb.png" alt="wwPDB" style="width: 90px; background: #fff; padding: 9px" /></a> <a title="Go to wwPDB Foundation homepage" href="http://foundation.wwpdb.org/" target="_wwpdb"><img src="/pdbe/static/images/logos/wwPDB/wwpdb-2016.png" alt="wwPDB Foundation" style="width: 90px; background: #fff; padding: 9px" /></a></p>
+<style>
+<!--/*--><![CDATA[/* ><!--*/
+
+
+              .elixir-ribbon h5 {
+
+                  margin: .5rem 0 0;
+
+                  display: inline-block;
+
+                  padding-left: 0px;
+
+              }
+
+              .elixir-ribbon a {
+
+                     border: none;
+
+              }
+
+
+/*--><!]]>*/
+</style><div id="elixir-banner" style="border-top: 2px solid #eee;" data-color="none" data-use-cdr-logo="true" data-name="PDBe" data-description="PDBe is an Elixir Core Data Resource" data-more-information-link="https://www.elixir-europe.org/platforms/data/core-data-resources" data-use-basic-styles="true"></div>
+<script defer="defer" src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"></script>  </div>
+
+
+
+  <div class="content">
+      </div>
+
+		</div>
+		<!-- End optional local footer -->
+
+		<div id="global-footer" class="grid_24">
+
+			<nav id="global-nav-expanded">
+
+				<div class="grid_4 alpha">
+					<h3 class="embl-ebi"><a href="//www.ebi.ac.uk/" title="EMBL-EBI">EMBL-EBI</a></h3>
+				</div>
+
+				<div class="grid_4">
+					<h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
+				</div>
+
+				<div class="grid_4">
+					<h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
+				</div>
+
+				<div class="grid_4">
+					<h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
+				</div>
+
+				<div class="grid_4">
+					<h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
+				</div>
+
+				<div class="grid_4 omega">
+					<h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
+				</div>
+
+			</nav>
+
+			<section id="ebi-footer-meta">
+				<p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>
+				<p class="legal">Copyright &copy; EMBL-EBI 2014 | EBI is an Outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="/about/privacy">Privacy</a> | <a href="/about/cookies">Cookies</a> | <a href="/about/terms-of-use">Terms of use</a></p>
+			</section>
+
+		</div>
+
+    </footer>
+  </div> <!--! end of #wrapper -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  -->
+
+
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+  <!-- end scripts-->
+
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  -->
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+
+
+<!-- page_bottom -->
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery('#local-title').addClass('logo-title-strapline');
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery('div#local-search').removeAttr('id');
+//--><!]]>
+</script>
+          <script type="text/javascript" src="/pdbe/js/pdbe_main.js" defer></script>
+
+
+					<!-- BEGIN: VF 2.0 sample -->
+					<!-- Data protection banner -->
+					<link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=581&pattern=node-body&amp;source=contenthub" data-target="self" data-embl-js-content-hub-loader>
+					<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/components/raw/vf-banner/vf-banner.css">
+					<!-- END: VF 2.0 sample -->
+
+
+		      <script src="https://dev.assets.emblstatic.net/vf/scripts/scripts.js"></script>
+		      <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/css/styles.css">
+
+
+
+    </body></html>

@@ -1,0 +1,1394 @@
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="eng">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="The European Bioinformatics Institute" />
+<meta name="author" content="EBI Web Team" />
+<meta http-equiv="Content-Language" content="en-GB" />
+<meta http-equiv="Window-target" content="_top" />
+<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/" />
+<meta name="generator" content="Dreamweaver 8" />
+<meta name="google-site-verification" content="_EqhEyp9OPauakvySwnmL9-txEV9VxUR30tDbCuf1ic" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>ChEMBL</title>
+
+<!-- Hotjar Tracking Code for https://www.ebi.ac.uk/chembl/beta/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:670705,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<title></title>
+
+<link type="text/css" href="https://www.ebi.ac.uk/chembl/js/jquery-ui-smoothness/css/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.ebi.ac.uk/chembl/css/styledButton.css" rel="stylesheet" />
+
+
+
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery-1.9.1.min.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery-migrate-1.1.1.min.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.jstree.rc3.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.blockUI.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl//js/jquery.form.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery-ui-smoothness/js/jquery-ui-1.8.2.custom.min.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.inlineFieldLabel.js'></script>
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.qtip-1.0.0-rc3.js'></script>
+
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.cookie.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.hotkeys.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery_plugins/jquery.styledButton.plugin.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/highcharts/highcharts.js'></script>
+<!--
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/highcharts/excanvas.compiled.js'></script>
+-->
+<!-- Make sure local js is declared after jquery, as it requires jquery initialisation -->
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/chembl.js'></script>
+
+<link href="https://www.ebi.ac.uk/chembl/css/ci_functions.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jquery.gchart.js'></script>
+
+
+
+<!-- datatables js -->
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/datatables/media/js/jquery.dataTables.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/datatables/media/js/ColVis.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/datatables/media/js/ColReorder.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/datatables/media/js/FixedHeader.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/datatables/media/js/DT_bootstrap.js'></script>
+
+		<link type="text/css" href="https://www.ebi.ac.uk/chembl/css/bootstrap.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href='https://www.ebi.ac.uk/chembl/datatables/media/css/DT_bootstrap.css'>
+		<link rel="stylesheet" type="text/css" href='https://www.ebi.ac.uk/chembl/datatables/media/css/ColVis.css'>
+		<style type="text/css" title="currentStyle">
+
+			.pagination {
+    		float:left;
+    		clear:both;
+			}
+			.FixedHeader_Cloned th { background-color: white;}
+
+			table.table {
+    clear: both;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+}
+
+.table-bordered {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-collapse: separate;
+    border-color: #DDDDDD #DDDDDD #DDDDDD -moz-use-text-color;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px 0;
+}
+bootstrap.css (line 2024)
+.table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+bootstrap.css (line 1980)
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+		</style>
+
+
+<!--  end datatables js -->
+
+
+
+
+
+
+<style type="text/css">
+
+.classification a:link {
+	color: blue;
+	text-decoration: underline;
+}
+
+
+tr{
+	font-family:Arial Unicode MS,Lucida Sans Unicode,Arial,Helvetica,sans-serif;
+}
+
+td.chebiDataHeader {
+   background-color:#deebeb;
+   font-weight:normal;
+   color: #006666;
+}
+
+th.chebiDataHeader {
+   background-color:#deebeb;
+   font-weight:normal;
+   color: #006666;
+}
+
+
+
+table.stats {
+
+        font-family:arial;
+
+        font-size: 10pt;
+        width: 50%;
+        border-style: none;
+        color: #404040;
+}
+
+table.stats thead tr th {
+        font-size: 10pt;
+        padding: 4px;
+}
+
+
+table.stats tbody td {
+
+        color:#006666;
+}
+
+table.stats tbody td txt{
+        color:#000;
+       text-align: right;
+}
+
+table.stats tbody td break{
+       margin-top:20px;
+}
+</style>
+
+<link rel="stylesheet" href="https://www.ebi.ac.uk/inc/css/contents.css" type="text/css" />
+
+<link rel="apple-touch-icon" href="https://www.ebi.ac.uk/chembl/images/chembldb.png"/>
+<link rel="stylesheet" href='https://www.ebi.ac.uk/chembl/css/userstyles.css' type="text/css"/>
+<link rel="stylesheet"  href='https://www.ebi.ac.uk/chembl/css/basicstyles.css' type="text/css" />
+
+
+<link rel="stylesheet"  href='https://www.ebi.ac.uk/chembl/css/sidebars.css'   type="text/css" />
+<link rel="stylesheet" href='https://www.ebi.ac.uk/chembl/css/styles.css' type="text/css" />
+
+<script  src="https://www.ebi.ac.uk/inc/js/footer.js" type="text/javascript"></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/structure_search.js'></script>
+
+<link type="text/css" rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/css/mitigation/develop/ebi-mitigation.css"/>
+<link type="text/css" rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/css/mitigation/develop/embl-petrol-colours.css"/>
+<script type="text/javascript">
+    var localFrameworkVersion = 'other';
+    var newDataProtectionNotificationBanner = document.createElement('script');
+    newDataProtectionNotificationBanner.src = 'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js?legacyRequest='+localFrameworkVersion;
+    document.head.appendChild(newDataProtectionNotificationBanner);
+      newDataProtectionNotificationBanner.onload = function() {
+      ebiFrameworkRunDataProtectionBanner(); // invoke the banner
+    };
+</script>
+<script defer src="https://www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+
+<script type="text/javascript">
+
+
+var req;
+var which;
+
+var prevwhich;
+var siteurl='/chembl/MODULES/filltree.php';
+
+function exportmolfile (molfile) {
+	  var myForm = document.createElement("form");
+	  myForm.method="post" ;
+	  myForm.action = '/chembl/compound/download_molfile/'+molfile;
+	    var myInput = document.createElement("input") ;
+	    myInput.setAttribute("molfile",molfile) ;
+	    myForm.appendChild(myInput) ;
+	  document.body.appendChild(myForm) ;
+	  myForm.submit() ;
+	  document.body.removeChild(myForm) ;
+	}
+
+function retrieveURL(url) {
+  if (window.XMLHttpRequest) { // Non-IE browsers
+    req = new XMLHttpRequest();
+    req.onreadystatechange = processStateChange;
+    try {
+    	 req.abort;
+    	 req.open('get',url,true);
+    	 req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    	 req.send('arg1=val1&arg2=val2&arg3=val3');
+    } catch (e) {
+      alert(e);
+    }
+    req.send(null);
+  } else if (window.ActiveXObject) { // IE
+    req = new ActiveXObject("Microsoft.XMLHTTP");
+    if (req) {
+      req.onreadystatechange = processStateChange;
+      req.abort;
+      req.open('post',url,true);
+      req.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+      req.send('arg1=val1&arg2=val2&arg3=val3');
+    }
+  }
+}
+
+function processStateChange() {
+  if (req.readyState == 4) { // Complete
+    if (req.status == 200) { // OK response
+      document.getElementById("bioact_details").innerHTML = req.responseText;
+    } else {
+      alert("Problem: " + req.statusText);
+    }
+  }
+}
+
+
+function updateValueField(what) {
+	var theval = what.options[what.selectedIndex].value
+	if(theval == "any") {
+		document.getElementById('variable').disabled = true
+		document.getElementById('variable').value = ""
+	}
+	else {
+		document.getElementById('variable').disabled = false
+	}
+}
+ function repl(x) {
+	 x = x.replace(/'/g, "\\\'");
+	alert(x);
+	return x;
+ };
+
+function addActToList() {
+	 var bioact_type = document.getElementById('which_act').options[document.getElementById('which_act').selectedIndex].value
+	 var bioact_cond = document.getElementById('conditions').options[document.getElementById('conditions').selectedIndex].value
+	 var variable = document.getElementById('variable').value
+	 if(bioact_cond != "any"){
+		 //document.getElementById('variable').disabled = false
+	 }
+	  if(variable == "" && bioact_cond != "any"){
+		document.getElementById('bioacterror').innerHTML = "Please ensure you enter a value"
+	}
+	else {
+		document.getElementById('bioacterror').innerHTML = ""
+		var newRow = document.getElementById("tblGrid").insertRow(-1)
+		var oCell = newRow.insertCell(-1);
+    		oCell.innerHTML = bioact_type;
+	    	oCell = newRow.insertCell(-1);
+	    	oCell.innerHTML = bioact_cond;
+	    	oCell = newRow.insertCell(-1);
+	    	oCell.innerHTML = variable;
+	    	oCell = newRow.insertCell(-1);
+	    	oCell.innerHTML = "<input type='button' value='Delete' onclick='removeRow(this);'/>";
+	    	document.getElementById('bioact_step3').style.display = ''
+	}
+}
+
+
+function removeRow(src) {
+
+    var oRow = src.parentNode.parentNode;
+    var table = document.getElementById('tblGrid');
+    table.deleteRow(oRow.rowIndex);
+    var oRows = table.getElementsByTagName('tr');
+	var iRowCount = oRows.length;
+	if(iRowCount < 2) {
+		document.getElementById('bioact_step3').style.display = 'none';
+	}
+}
+
+
+function filterBioAct(entity_type) {
+	var list_of_acts = ""
+	rowlength = document.getElementById("tblGrid").rows.length
+	for(var j=1;j<rowlength;j++) {
+		cells=document.getElementById("tblGrid").rows[j].getElementsByTagName("td");
+		var temp = ""
+		for (var i=0; i<cells.length-1; i++)  {
+			temp+= cells[i].innerHTML+","
+		}
+		temp = temp.slice(0, -1)
+		list_of_acts+=temp+":";
+	}
+	list_of_acts = list_of_acts.slice(0, -1);
+	list_of_acts = list_of_acts.replace(/ /g,"_");
+	list_of_acts = list_of_acts.replace(/\//g,"@");
+	var bioact_type = document.getElementById('activity_type').options[document.getElementById('activity_type').selectedIndex].value
+	window.location.href='https://www.ebi.ac.uk/chembl/'+"/bioactivity/filter_data/"+entity_type+'/&bioact_list='+list_of_acts+'&bioact_type='+bioact_type;
+}
+
+function shoutFilterTargets(what, extra) {
+	var url='/chembl/target/'
+	url=encodeURI(url)
+	if (window.XMLHttpRequest) { req = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { req = new ActiveXObject("Microsoft.XMLHTTP"); }
+        if (req != undefined) {
+        	req.onreadystatechange = function() {listen(what);};
+                req.open("POST", url, true);
+                req.send("");
+	}
+}
+
+
+function removeSeq() {
+        var thetext = document.getElementById('seq').value;
+        if(thetext == "Enter sequence here.") {
+                document.getElementById('seq').value = "";;
+        }
+}
+
+</script>
+
+<script type="text/javascript">
+
+var TARGET_KEYWORD_SEARCH_URL = '/chembl/target/keyword';
+var COMPOUND_KEYWORD_SEARCH_URL = '/chembl/compound/keyword';
+var ASSAY_KEYWORD_SEARCH_URL = '/chembl/assay/keyword';
+var STRUCTURE_SEARCH_URL = '/chembl/compound';
+var DOC_KEYWORD_SEARCH_URL = '/chembl/doc/keyword';
+var CELL_KEYWORD_SEARCH_URL = '/chembl/cell/keyword';
+var TISSUE_KEYWORD_SEARCH_URL = '/chembl/tissue/keyword';
+
+		$(document).ready(function () {
+			//Hide (Collapse) the toggle containers on load
+					$(".toggle_container").hide();
+
+
+					$("a.trigger").click(function(){
+					$(this).toggleClass("active").next().slideToggle("slow");
+					});
+
+
+					$('#loading').hide();
+					$('#search_error_div').hide();
+
+
+					$('#loading').ajaxStart(function() {
+						$(this).show();
+						$('#search_error_div').hide();
+
+					}).ajaxStop(function() {
+						$(this).hide();
+					});
+
+                    $('#keyword').attr('value', "Search ChEMBL...");
+
+                    $('#keyword').click(function() {
+                      $(this).attr('value', "");
+                    });
+
+					$('#compound_button').click(function() {
+						keyword_search(COMPOUND_KEYWORD_SEARCH_URL);
+					});
+
+					$('#target_button').click(function() {
+						keyword_search(TARGET_KEYWORD_SEARCH_URL);
+					});
+
+
+					$('#assay_button').click(function() {
+						keyword_search(ASSAY_KEYWORD_SEARCH_URL);
+					});
+
+
+					$('#doc_button').click(function() {
+						keyword_search(DOC_KEYWORD_SEARCH_URL);
+					});
+
+					$('#cell_button').click(function() {
+						keyword_search(CELL_KEYWORD_SEARCH_URL);
+					});
+
+					$('#tissue_button').click(function() {
+						keyword_search(TISSUE_KEYWORD_SEARCH_URL);
+					});
+
+		$("span").css({
+				 'font-size' : '12px'
+			});
+
+			$("span.alone").styledButton({
+				'orientation' : 'alone',
+				'action' : function () {
+
+				},
+				'display' : 'block'
+			});
+
+
+
+		} );
+
+		function keyword_search(search_url){
+
+				// validate and process form here
+					var keyword_search_val = $('#keyword').val();
+		 			if (keyword_search_val == "" || keyword_search_val == "Search ChEMBL...") {
+		 	 			$("#search_error_div").show();
+		 	 			$("input#keyword").focus();
+		 	 		return false;
+		 			}
+
+		 			var exact_match_search_val = $("#exact_match_search").is(':checked') ? 'exact' : 'wild';
+
+                $.blockUI({ css: {
+                            border: 'none',
+                            padding: '15px',
+                            backgroundColor: '#000',
+                            '-webkit-border-radius': '10px',
+                            '-moz-border-radius': '10px',
+                            opacity: .5,
+                            color: '#fff'
+                        } });
+
+				$.post(search_url, { keyword: keyword_search_val, exact: exact_match_search_val  }, function(data) {
+
+					  var results = data.getElementsByTagName("results") ;
+
+					    $(data).find('results').each(function(){
+					    	var $results = $(this);
+					    	var url = $results.find('url').text();
+					    	url = url.replace(/:/g,"/");
+							url = '/chembl/'+'index.php'+url;
+					        location.href = url;
+					    });
+
+				},'xml').always(function(){$.unblockUI();}); return false;
+
+
+		}
+
+
+
+	function assay_keyword_search(search_url){
+
+				// validate and process form here
+					var keyword_search_val = $('#assay_keyword').val();
+		 			if (keyword_search_val == "") {
+		 	 			$("#search_error_div").show();
+		 	 			$("input#assay_keyword").focus();
+		 	 		return false;
+		 			}
+
+                $.blockUI({ css: {
+                            border: 'none',
+                            padding: '15px',
+                            backgroundColor: '#000',
+                            '-webkit-border-radius': '10px',
+                            '-moz-border-radius': '10px',
+                            opacity: .5,
+                            color: '#fff'
+                        } });
+
+				$.post(search_url, { keyword: keyword_search_val  }, function(data) {
+
+					  var results = data.getElementsByTagName("results") ;
+
+					    $(data).find('results').each(function(){
+					    	var $results = $(this);
+					    	var url = $results.find('url').text();
+					    	url = url.replace(/:/g,"/");
+							url = '/chembl/'+'index.php'+url;
+					        location.href = url;
+					    });
+
+				},'xml').always(function(){$.unblockUI();}); return false;
+
+	}
+
+	</script>
+
+
+<!-- add header scripts here -->
+<!-- InstanceEndEditable -->
+</head>
+<body class="wide">
+    <div class="headerdiv" id="headerdiv">
+  <div class="header">
+    <div id="global-masthead" class="masthead grid_24">
+      <!-- <p>EMBL-EBI</p> -->
+      <p id="logo">
+        <!--This has to be one line and no newline characters-->
+        <a href="https://www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="https://www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/logo.png" alt="European Bioinformatics Institute"/></a>
+      </p>
+
+      <div class="nav">
+        <ul id="global-nav">
+          <li class="first" id="services">
+            <a href="https://www.ebi.ac.uk/services" title="">Services</a>
+          </li>
+          <li id="research">
+            <a href="https://www.ebi.ac.uk/research" title="">Research</a>
+          </li>
+          <li id="training">
+            <a href="https://www.ebi.ac.uk/training" title="">Training</a>
+          </li>
+          <li id="industry">
+            <a href="https://www.ebi.ac.uk/industry" title="">Industry</a>
+          </li>
+          <li id="about" class="last">
+            <a href="https://www.ebi.ac.uk/about" title="">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="local-masthead" class="masthead grid_24 masthead-chembl">
+
+      <!-- CHOOSE -->
+
+
+<div id="local-title" class="grid_12 alpha logo-title">
+  <a href="https://www.ebi.ac.uk/chembl/" title="Back to ChEMBL homepage">
+    <img src="https://www.ebi.ac.uk/chembl/images/new_chembl_logo_v2.png" alt="ChEMBL logo" />
+  </a> <span style="font-size: 12px;"><h1>ChEMBL</h1></span>
+</div>
+
+<div class="grid_12 alpha">
+   <a href="http://www.wellcome.ac.uk/" title="Wellcome Trust homepage">
+     <img style="float:right; margin-top:1em;" src="https://www.ebi.ac.uk/chembl/images/wt_black.png" alt="Wellcome Trust Logo"/>
+     </a>
+</div>
+
+
+      <!-- -->
+
+    </div>
+  </div>
+</div>
+    <div class="contents" id="contents" >
+			<table class="contentspane" id="contentspane" summary="The main content pane of the page" style="width: 100%">
+				<tr>
+				  <td class="leftmargin"><img src="https://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></td>
+	         <td class="leftmenucell" id="leftmenucell"> <div class="leftmenu" id="leftmenu" style="width: 145px; visibility: visible; display: block;">      <!-- start add menu here -->
+<ul class="chembl_resources">
+  <li class="resource_item "><a href='https://www.ebi.ac.uk/chembl/'>ChEMBL</a></li>
+  <li class="resource_item  resource_not_selected "><a href='https://www.ebi.ac.uk/chembl/downloads'>Downloads</a></li>
+  <li class="resource_item resource_not_selected"><a href='https://www.ebi.ac.uk/unichem'>UniChem</a></li>
+  <li class="resource_item resource_not_selected"><a href='https://www.surechembl.org/'>SureChEMBL</a></li>
+  <li class="resource_item resource_not_selected"><a href='https://www.ebi.ac.uk/chembl/malaria'>Malaria Data</a></li>
+  <li class="resource_item  resource_not_selected "><a href='https://chembl.gitbook.io/chembl-ntd/'>ChEMBL-NTD</a></li>
+  <li class="resource_item resource_not_selected"><a href='https://www.ebi.ac.uk/chembl/admesarfari'>ADME SARfari</a></li>
+  <li class="resource_item  resource_not_selected "><a href='https://www.ebi.ac.uk/chembl/ws'>Web Services</a></li>
+  <li class="resource_item resource_not_selected"><a href='ftp://ftp.ebi.ac.uk/pub/databases/chembl/VM/myChEMBL/current/'>myChEMBL</a></li>
+  <li class="resource_item resource_not_selected"><a href='https://www.ebi.ac.uk/rdf'>EBI RDF Platform</a></li>
+  <li class="resource_item  resource_not_selected "><a href='https://www.ebi.ac.uk/chembl/faq'>FAQ</a></li>
+  <li class="resource_item resource_not_selected"><a href='http://chembl.github.io/status/'>Web status page</a></li>
+  <li class="resource_item  resource_not_selected "><a href='https://www.ebi.ac.uk/chembl/funding'>Funding</a></li>
+  <li class="resource_item resource_not_selected"><a href='https://docs.google.com/document/d/1kIEzxDDY1aZ1sFSYqnKpOQMpliOGSeDyK_IJXRwtXbE/pub'>Internships</a><img class="new-icon-menu" src="https://www.ebi.ac.uk/chembl//images/new.png" border="0"></li>
+</ul>
+
+<div class="slidecontainer" style="float:right; margin-top:5px;">
+  <div class="iconbox2heading">
+    ChEMBL Statistics
+  </div>
+  <div class="iconbox2contents" id="statsContent"  style="display: block;">
+   &nbsp;
+   Loading Statistics...
+  </div>
+</div>
+
+
+<script type="text/javascript">
+var STATISTICS_URL =  "/chembl//starlite/fetch_statistics/1548424175";
+
+$(document).ready(function () {
+    fetch_statistics(STATISTICS_URL);
+});
+
+function fetch_statistics(statistics_url){
+	$.ajax({
+      type: 'post',
+      url: statistics_url,
+      success: function(data) {
+        $("#statsContent").html(data);
+      }
+    });
+}
+</script>
+<div class="slidecontainer" style="float: right; margin-top: 5px;">
+  <div class="iconbox2heading">
+    <a href="http://chembl.blogspot.com/" style="color:#006666">ChEMBL Blog</a>
+  </div>
+  <div id="blog" class="iconbox2contents" style="display: block;"></div>
+</div>
+
+<script type="text/javascript">
+function load_blog(json) {
+    // Clear any information displayed under the "data" div.
+    var ul = document.createElement('ul');
+    for (var i = 0; i < json.feed.entry.length; i++) {
+        var entry = json.feed.entry[i];
+        var alturl;
+
+        for (var k = 0; k < entry.link.length; k++) {
+            if (entry.link[k].rel == 'alternate') {
+                alturl = entry.link[k].href;
+            break;
+            }
+        }
+
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = alturl;
+        a.target = '_blank';
+
+        var txt = document.createTextNode(entry.title.$t);
+        a.appendChild(txt);
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+
+    // Install the bullet list of blog posts.
+    document.getElementById('blog').appendChild(ul);
+}
+</script>
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/index.php/blog'></script>
+<script type="text/javascript" src="https://www.ebi.ac.uk/inc/js/sidebars.js"></script>
+
+<script type="text/javascript">
+
+$(".resource_item").click(function () {
+	  var url = $(this).find('a').attr('href');
+	  window.location = url;
+});
+
+$(".resource_not_selected").hover(
+    function () {
+        $(this).removeClass('resource_not_selected');
+    },
+    function () {
+        $(this).addClass('resource_not_selected');
+});
+</script>
+
+
+<!-- end add menu here -->
+<img src="https://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></div></td>
+				  <td class="contentsarea" id="contentsarea">
+					<!-- InstanceBeginEditable name="contents" -->
+                    		<!-- start contents here --><!-- start page contents  here -->
+<div style="clear: both;">
+
+<div class="new-interface-link-container">
+    Check out our
+    <a href="https://www.ebi.ac.uk/chembl/beta/">New Interface (Beta)</a>.
+    <a href="https://chembl.gitbook.io/chembl-interface-documentation/">
+        Learn More
+    </a>.
+</div>
+
+
+<div id="breadcrumbs" class="breadcrumbs" style="float: left;">
+  <a href="http://www.ebi.ac.uk/" class="firstbreadcrumb">EBI</a>
+  <a href ="http://www.ebi.ac.uk/Databases/">Databases</a>
+  <a href="http://www.ebi.ac.uk/Databases/smallmolecules.html">Small Molecules</a>
+  <a href="http://www.ebi.ac.uk/chembldb/">ChEMBL Database</a>
+  <a href="#">Home</a>
+</div>
+<div id="open_icons" style="float: right;">
+
+
+
+</div>
+</div>
+<br/>
+<h1 style="font-size:12;color: #000000; font-weight:normal">
+
+<table>
+  <tr>
+    <td><input style="height:22px;font:14px arial,sans-serif;" id="keyword" name="keyword" size="60" type="text" value=""></input></td>
+    <td><span class="alone" style="height:20px;" id="compound_button">Compounds</span></td>
+    <td><span class="alone" style="height:20px;" id="target_button">Targets</span></td>
+    <td><span class="alone"  style="height:20px;" id="assay_button">Assays</span></td>
+    <td><span class="alone"  style="height:20px;" id="doc_button">Documents</span></td>
+    <td><span class="alone"  style="height:20px;" id="cell_button">Cells</span></td>
+    <td><span class="alone"  style="height:20px;" id="tissue_button">Tissues</span></td>
+
+    <td nowrap="nowrap" style="font:10px arial,sans-serif; margin-left: 10px;">
+       <input type="checkbox" name="exact_match_search" id="exact_match_search"/>Exact Match
+    </td>
+
+    <td nowrap="nowrap">
+      <a style="font:10px arial,sans-serif; margin-left: 10px;" href="#" onclick="$('#src_session_dialog').dialog('open')">Activity Source Filter</a>
+    </td>
+
+    <td>
+      <div id="search_error_div" class="ui-state-error-text" style="padding: 0 .7em; color:black;">
+	    <p>
+          <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+		  Please enter a search term
+        </p>
+      </div>
+    </td>
+    <td>
+      <img id="loading" src='https://www.ebi.ac.uk/chembl/images/trans_loader.gif'>
+    </td>
+  </tr>
+</table>
+
+</h1>
+
+
+<script>
+  $(function() {
+
+    $( "#src_session_dialog" ).dialog({
+        autoOpen: false,
+        width: 700,
+        title: 'Selected Bioactivity Sources'
+    });
+
+    $('#src_session_button').button();
+
+    // Attach a submit handler to the src_session_form form
+    $("#src_session_form").submit(function(event) {
+
+      // Stop src_session_form form from submitting normally
+      event.preventDefault();
+
+      // Get src_session_form attributes
+      var srcs = $(this).find( 'input[name="assay_src[]"]:checked' ).map(function(){ return $(this).val(); }).get().join(",");
+      var url  = $(this).attr( 'action' );
+
+      // Post form
+      $.post( url, { assay_src: srcs } );
+
+      // Close dialog
+      $('#src_session_dialog').dialog('close');
+    });
+
+    $("#src_check_all").click(function(event) {
+        if($(this).attr('checked')){
+            $('input:checkbox.src_checkbox').attr('checked', true);
+        } else {
+           $('input:checkbox.src_checkbox').attr('checked', false);
+        }
+
+    });
+
+  });
+</script>
+
+<div id="src_session_dialog">
+
+    <form name="input" action="/chembl//starlite/bioactivity_src" method="post" id="src_session_form">
+      <table cellspacing="0px" cellpadding="7px" style="margin:10px 5px 0px 5px;">
+        <tr>
+          <th style="border-bottom: 1px solid black; text-align: left;">Selected</th>
+          <th style="border-bottom: 1px solid black; text-align: left;">Source</th>
+          <th style="border-bottom: 1px solid black; text-align: left;">Assay Counts</th>
+          <th style="border-bottom: 1px solid black; text-align: left;">Activity Counts</th>
+          <tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='1' checked='checked' ></input></td><td>Scientific Literature</td><td>1041733</td><td>6043592  (39.74%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='38' checked='checked' ></input></td><td>Patent Bioactivity Data</td><td>4258</td><td>74050  (0.49%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='37' checked='checked' ></input></td><td>BindingDB Database</td><td>4147</td><td>303295  (1.99%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='18' checked='checked' ></input></td><td>TP-search Transporter Database</td><td>3592</td><td>6765  (0.04%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='7' checked='checked' ></input></td><td>PubChem BioAssays</td><td>2860</td><td>7434992  (48.89%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='28' checked='checked' ></input></td><td>FDA Approval Packages</td><td>1386</td><td>1387  (0.01%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='5' checked='checked' ></input></td><td>Sanger Institute Genomics of Drug Sensitivity in Cancer</td><td>714</td><td>73169  (0.48%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='16' checked='checked' ></input></td><td>GSK Published Kinase Inhibitor Set</td><td>456</td><td>169451  (1.11%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='14' checked='checked' ></input></td><td>Drugs for Neglected Diseases Initiative (DNDi)</td><td>233</td><td>14452  (0.1%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='17' checked='checked' ></input></td><td>MMV Malaria Box</td><td>138</td><td>45158  (0.3%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='39' checked='checked' ></input></td><td>Curated Drug Pharmacokinetic Data</td><td>136</td><td>1163  (0.01%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='15' checked='checked' ></input></td><td>DrugMatrix</td><td>134</td><td>494046  (3.25%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='34' checked='checked' ></input></td><td>MMV Pathogen Box</td><td>84</td><td>4657  (0.03%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='30' checked='checked' ></input></td><td>K4DD Project</td><td>46</td><td>2064  (0.01%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='23' checked='checked' ></input></td><td>Open Source Malaria Screening</td><td>22</td><td>344  (0%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='4' checked='checked' ></input></td><td>St Jude Malaria Screening</td><td>16</td><td>5456  (0.04%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='20' checked='checked' ></input></td><td>WHO-TDR Malaria Screening</td><td>16</td><td>5853  (0.04%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='22' checked='checked' ></input></td><td>GSK Tuberculosis Screening</td><td>15</td><td>1814  (0.01%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='40' checked='checked' ></input></td><td>CO-ADD antimicrobial screening data</td><td>15</td><td>180  (0%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='27' checked='checked' ></input></td><td>AstraZeneca Deposited Data</td><td>15</td><td>11687  (0.08%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='29' checked='checked' ></input></td><td>GSK Kinetoplastid Screening</td><td>13</td><td>7235  (0.05%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='21' checked='checked' ></input></td><td>Deposited Supplementary Bioactivity Data</td><td>13</td><td>4817  (0.03%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='31' checked='checked' ></input></td><td>Curated Drug Metabolism Pathways</td><td>11</td><td>11  (0%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='32' checked='checked' ></input></td><td>St Jude Leishmania Screening</td><td>6</td><td>42105  (0.28%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='3' checked='checked' ></input></td><td>Novartis Malaria Screening</td><td>6</td><td>27888  (0.18%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='2' checked='checked' ></input></td><td>GSK Malaria Screening</td><td>6</td><td>81198  (0.53%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='19' checked='checked' ></input></td><td>Harvard Malaria Screening</td><td>4</td><td>111  (0%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='33' checked='checked' ></input></td><td>Gates Library compound collection</td><td>4</td><td>139775  (0.92%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='11' checked='checked' ></input></td><td>Open TG-GATEs</td><td>2</td><td>210708  (1.39%)</td></tr><tr><td><input type='checkbox'  class='src_checkbox' name='assay_src[]' value='43' checked='checked' ></input></td><td>Published Kinase Inhibitor Set 2</td><td>1</td><td>491  (0%)</td></tr>          <tr>
+            <td style="border-top: 1px solid black; text-align: left;" colspan="4">
+              <input id="src_check_all" type='checkbox' checked='checked' name="src_check_all" ></input>Check/Uncheck All
+            </td>
+          </tr>
+      </table>
+
+      <input id="src_session_button" type="submit" value="Update" style="float:right;"/>
+
+    </form>
+
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin:0px;padding:0px;">
+   <tr >
+      <td id="tab1" height="30" style="font-size:12;color: #006666;font-weight:bold;" align="center" class="tabStyleView" style="border-left:1px solid #999999;"><b>Ligand Search</b></td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab2" height="30" style="font-size:12;color: #000000;" align="center" class="tabStyle" onclick="window.location='/chembl/target';" >Target Search</td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab2" height="30" style="font-size:12;color: #000000;" align="center" class="tabStyle" onclick="window.location='/chembl/target/browser';" >Browse Targets</td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab2" height="30" style="font-size:12;color: #000000;" align="center" class="tabStyle" onclick="window.location='/chembl/drugstore';" >Browse Drugs</td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab2" height="30" style="font-size:12;color: #000000;" align="center" class="tabStyle" onclick="window.location='/chembl/drug/targets';" >Browse Drug Targets</td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab2" height="30" style="font-size:12;color: #000000;" align="center" class="tabStyle" onclick="window.location='/chembl/drug/indications';" >Browse Drug Indications</td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab2" height="30" style="font-size:12;color: #000000;" align="center" class="tabStyle" onclick="window.location='/chembl/about';" >About</td>
+      <td height="30" class="tabStyleBlank">&nbsp;</td>
+      <td id="tab4" height="30" style="height:30px;border:0px;border-bottom:1px solid #999999;" > &nbsp;</td>
+   </tr>
+</table>
+
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/jsme/jsme/jsme.nocache.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/marvinjs/js/promise-0.1.1.min.js'></script>
+<script type="text/javascript" src='https://www.ebi.ac.uk/chembl/js/marvinjs/js/marvinjslauncher.js'></script>
+
+<div id="cmpd_search" style="margin-top:10px;">
+
+  <form method="post" id="compoundForm" name="compoundForm" action="compound" enctype="multipart/form-data">
+    <table cellspacing="0" cellpadding="0" id="table_one">
+      <tr>
+        <td style="font-size:12px;">
+
+          <div id="jsme_sketcher" class="sketcher_div"></div>
+
+          <div id="marvinjs_sketcher" class="sketcher_div">
+            <iframe src="https://www.ebi.ac.uk/chembl/js/marvinjs/editorws.html" id="sketch" class="sketcher-frame" width="618px" height="474px" style="border:1px solid #b3b3b3;" ></iframe>
+          </div>
+
+        </td>
+        <td style="vertical-align:top; padding-left:100px;padding-top:10px;">
+
+          <div style="font-size:13px; font-size:12;color: #006666;">
+            <b>List Search</b>
+            <br/><br/>
+          </div>
+          <input style="font-size:12px;" type="radio" id="radio1" name="radio" value="smiles" /><label style="font-size:12px;" for="radio1">SMILES Search</label>
+          <input style="font-size:12px;" type="radio" id="radio2" name="radio" value="compound_ids" checked="checked" /><label style="font-size:12px;" for="radio2">ChEMBL ID Search</label>
+          <input style="font-size:12px;" type="radio" id="radio3" name="radio" value="keyword" /><label style="font-size:12px;" for="radio3">Keyword Search</label>
+
+          <table cellspacing="0" cols="3" cellpadding="0" id="table_two">
+            <tr style="padding-bottom:20px;">
+              <td>
+                <textarea cols="40" name="searchInput" id="searchInput" rows="5"></textarea>
+                <input style="margin-top:10px;" id="list_search_btn" type="button" value="Fetch Compounds" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="list_error_div" class="ui-state-error-text" style="clear:left; padding: 0 .7em; color:black;">
+                  <p>
+                    <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+                    Please provide a valid list before submitting
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <br/><br/><br/>
+
+          <div style="font-size:13px; font-size:12;color: #006666;">
+            <b>Biologicals Blast Search</b>
+            <br/>
+          </div>
+          <table cellspacing="0" cols="3" cellpadding="0">
+            <tr style="padding-bottom:20px;">
+              <td>
+                <textarea cols="40" name="mabQueryFasta" id="mabQueryFasta" rows="5"></textarea>
+                <input style="margin-top:10px;" id="mab_search_btn" type="button" value="Run BLAST" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="blast_error_div" class="ui-state-error-text" style="padding: 0 .7em; color:black">
+				  <p>
+					<span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+					Please enter a FASTA sequence before submitting
+                  </p>
+				</div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <br/>
+          Compound Sketcher:
+          <select id="sketch_selector">
+            <option value="ignore">Please select....</option>
+            <option value="marvinjs">Marvin JS</option>
+            <option value="jsme">JSME</option>
+          </select>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td align="center">
+          <br/>
+          <select id="searchType" name="query_type">
+            <option value="Substructure">Substructure Search</option>
+            <option value="Similarity">Similarity</option>
+          </select>
+          &nbsp;&nbsp;
+          <select id="simCutOff" name="cut_off" disabled="disabled">
+            <option value="100">100%</option>
+            <option value="99">&gt;= 99%</option>
+            <option value="97">&gt;= 97%</option>
+            <option value="95">&gt;= 95%</option>
+            <option value="90">&gt;= 90%</option>
+            <option value="85">&gt;= 85%</option>
+            <option value="80">&gt;= 80%</option>
+            <option value="70">&gt;= 70%</option>
+          </select>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td align="center">
+          <br/>
+          <input type="button" id="structure_search_btn" value="Fetch Compounds">
+        </td>
+        <td></td>
+      </tr>
+    </table>
+
+    <input type="hidden" name="molfile" value=""></input>
+    <input type="hidden" id="smiles" name="smiles" value=""></input>
+    <input type="hidden" name="chime" value=""></input>
+
+    <div style="clear:left;">
+      <table>
+        <tr>
+          <td style="padding-top:10px;">
+            <div id="structure_error_div" class="ui-state-error-text" style="padding: 0 .7em; color:black;">
+              <p>
+                <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+                Please draw a structure before submitting
+              </p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+  <div class="clear"></div><!--/clear-floats-->
+</div>
+
+<script type="text/javascript" charset="utf-8">
+
+// Marvin setup
+var marvinSketcherInstance;
+
+MarvinJSUtil.getEditor("#sketch").then(function(sketcherInstance) {
+    marvinSketcherInstance = sketcherInstance;
+    readStructureCookie('marvinjs');
+}, function(error) {
+    alert("Loading of the sketcher failed"+error);
+});
+
+// JSME setup
+function jsmeOnLoad() {
+	jsmeApplet = new JSApplet.JSME("jsme_sketcher", "620px", "480px", {
+		"options" : "query,hydrogens"
+	});
+	document.JSME = jsmeApplet;
+	readStructureCookie('jsme');
+}
+
+
+var KEYWORD_SEARCH_URL      = '/chembl/compound/keyword/';
+var SMILES_SEARCH_URL       = '/chembl/compound/smiles/';
+var COMPOUND_IDS_SEARCH_URL = '/chembl/compound/ids/';
+var MAB_SEARCH_URL          = '/chembl/compound/blastmab/';
+
+var COMPOUND_SKETCHER       = readSketcherCookie();
+
+var search_url;
+var keyword;
+var compound_ids;
+var smiles;
+var structure;
+
+$(document).ready(function() {
+
+    $("#sketch_selector option:first").attr('selected', 'selected' );
+
+    $("#jsme_sketcher").hide();
+    $("#marvinjs_sketcher").hide();
+    displaySketcher();
+
+	$("#list_error_div").hide();
+    $("#structure_error_div").hide();
+    $("#blast_error_div").hide();
+
+    if (!$.browser.msie){
+        $('#searchInput').inlineFieldLabel({label:'Please enter a list of Compound IDs, keywords, or SMILES separated by newlines'});
+    } else {
+        $('#searchInput').val("Please enter a list of Compound IDs, keywords, or SMILES separated by newlines");
+    }
+
+    $("#structure_error_div").hide();
+    $("#list_error_div").hide();
+
+    $('#searchType').change(function(){
+        if(this.value == 'Similarity'){
+            $('#simCutOff').removeAttr("disabled");
+        } else {
+            $('#simCutOff').attr("disabled","disabled");
+        }
+    });
+});
+
+
+$('#radio1').click(function() {
+    $("#list_error_div").hide();
+    $("textarea#searchInput").focus();
+    if (!$.browser.msie){
+        $('#searchInput').inlineFieldLabel({label:'Please enter a list of SMILES separated by newlines'});
+    } else {
+        $('#searchInput').val("Please enter a list of SMILES separated by newlines");
+    }
+});
+
+$('#radio2').click(function() {
+    $("#list_error_div").hide();
+    $("textarea#searchInput").focus();
+    if (!$.browser.msie){
+        $('#searchInput').inlineFieldLabel({label:'Please enter a list of ids separated by newlines'});
+    } else {
+        $('#searchInput').val("Please enter a list of ids separated by newlines");
+    }
+});
+
+$('#radio3').click(function() {
+    $("#list_error_div").hide();
+    $("textarea#searchInput").focus();
+    if (!$.browser.msie){
+        $('#searchInput').inlineFieldLabel({label:'Please enter a list of keywords separated by newlines'});
+    } else {
+        $('#searchInput').val("Please enter a list of keywords separated by newlines");
+    }
+});
+
+$('textarea#searchInput').click(function(){
+    if( $("textarea#searchInput").val().match(/^Please enter a list/)){
+        $("textarea#searchInput").val("");
+    }
+    $("#list_error_div").hide();
+});
+
+$('#list_search_btn').click(function() {
+    var default_cmpd_search_val          = "Please enter a list of Compound IDs, keywords, or SMILES separated by newlines";
+    var default_cmpd_search_id_val       = "Please enter a list of ids separated by newlines";
+    var default_cmpd_search_smiles_val   = "Please enter a list of SMILES separated by newlines";
+    var default_cmpd_search_keywords_val = "Please enter a list of keywords separated by newlines";
+
+    if ($("input[name='radio']:checked").val() == 'keyword'){
+        search_url = KEYWORD_SEARCH_URL;
+        query_type = 'Keyword';
+        keyword = $("textarea#searchInput").val();
+    }else if ($("input[name='radio']:checked").val() == 'smiles'){
+        search_url = SMILES_SEARCH_URL;
+        query_type = 'Smiles';
+        smiles = $("textarea#searchInput").val();
+    }else if ($("input[name='radio']:checked").val() == 'compound_ids'){
+        search_url = COMPOUND_IDS_SEARCH_URL;
+        query_type = 'Ids';
+        compound_ids = $("textarea#searchInput").val();
+    }
+
+    if ($("textarea#searchInput").val().length < 1 ||
+        $("textarea#searchInput").val() == default_cmpd_search_val ||
+        $("textarea#searchInput").val() == default_cmpd_search_keywords_val ||
+        $("textarea#searchInput").val() == default_cmpd_search_id_val ||
+        $("textarea#searchInput").val() == default_cmpd_search_smiles_val) {
+            $("#list_error_div").show();
+            return;
+    } else {
+        $("#list_search_btn").prop('disabled', true);
+        $.growlUI('Gathering results...', 'Please wait.');
+        if ($("input[name='radio']:checked").val() == 'keyword'){
+            $.post(search_url, {keyword: keyword}, function(data) {
+                var results = data.getElementsByTagName("results") ;
+                $(data).find('results').each(function(){
+                    var $results = $(this);
+                    var url      = $results.find('url').text();
+                    url = url.replace(/:/g,"/");
+                    url = '/chembl/'+'index.php'+url;
+                    location.href = url;
+                });
+            },'xml').always(function(){$("#list_search_btn").prop('disabled', false);}); return false;
+        } else if ($("input[name='radio']:checked").val() == 'smiles'){
+            $.post(search_url, {smiles: smiles}, function(data) {
+                var results = data.getElementsByTagName("results") ;
+                $(data).find('results').each(function(){
+                    var $results = $(this);
+                    var url = $results.find('url').text();
+                    url = url.replace(/:/g,"/");
+                    url = '/chembl/'+'index.php'+url;
+                    location.href = url;
+                });
+            },'xml').always(function(){$("#list_search_btn").prop('disabled', false);}); return false;
+        } else if ($("input[name='radio']:checked").val() == 'compound_ids'){
+            $.post(search_url, {compound_list: compound_ids}, function(data) {
+                var results = data.getElementsByTagName("results") ;
+                $(data).find('results').each(function(){
+                    var $results = $(this);
+                    var url = $results.find('url').text();
+                    url = url.replace(/:/g,"/");
+                    url = '/chembl/'+'index.php'+url;
+                    location.href = url;
+                });
+            },'xml').always(function(){$("#list_search_btn").prop('disabled', false);}); return false;
+        }
+    }
+});
+
+$('#mab_search_btn').click(function() {
+    var default_mab_search_val          = "Please enter a FASTA sequence";
+
+    if ($("textarea#mabQueryFasta").val().length < 1 ||
+        $("textarea#mabQueryFasta").val() == default_mab_search_val) {
+            $("#blast_error_div").show();
+            return;
+    }
+
+    search_url = MAB_SEARCH_URL;
+    query_type = 'mab_blast';
+    fasta = $("textarea#mabQueryFasta").val();
+
+    $("#mab_search_btn").prop('disabled', true);
+    $.growlUI('Gathering results...', 'Please wait.');
+    $.post(search_url, {seq:fasta}, function(data) {
+        var results = data.getElementsByTagName("results") ;
+        $(data).find('results').each(function(){
+            var $results = $(this);
+            var url      = $results.find('url').text();
+            url = url.replace(/:/g,"/");
+            url = '/chembl/'+'index.php'+url;
+            location.href = url;
+        });
+    },'xml').always(function(){$("#mab_search_btn").prop('disabled', false);}); return false;
+
+});
+
+
+$("#plus").click(function() {
+    $('#opt_table').prepend('<tr><td><form><select><option>AND</option><option>OR</option><option>NOT</option></select></form></td><td><input type="text" value="Floxacin" size="30"></td><td><form><select><option>compound id</option><option>compound name</option><option>SMILES</option></select></form></td><td colspan="1"><input type="button" id="minus" value="-"></td></tr>');
+});
+
+
+$('#structure_search_btn').click(function() {
+
+    var query_type = $('#searchType').val();
+    var cut_off = $('#simCutOff').val();
+    var molfile = "";
+
+    if(COMPOUND_SKETCHER == 'jsme'){
+        molfile = document.JSME.molFile();
+        smiles  = document.JSME.smiles();
+        saveStructureCookie(COMPOUND_SKETCHER);
+        document.compoundForm.smiles.value  = smiles;
+    }
+
+    if(COMPOUND_SKETCHER == 'marvinjs'){
+        molfile = marvinSketcherInstance.exportAsMol();
+        saveStructureCookie(COMPOUND_SKETCHER);
+    }
+
+
+    document.compoundForm.molfile.value = molfile;
+
+    $("#structure_search_btn").prop('disabled', true);
+    $.growlUI('Gathering results...', 'Please wait.');
+    $.post(STRUCTURE_SEARCH_URL, $("#compoundForm").serialize(), function(data) {
+        var results = data.getElementsByTagName("results") ;
+        $(data).find('results').each(function(){
+            var $results = $(this);
+            var url = $results.find('url').text();
+            url = url.replace(/:/g,"/");
+            url = '/chembl/'+'index.php'+url;
+            location.href = url;
+        });
+    },'xml').always(function(){$("#structure_search_btn").prop('disabled', false);}); return false;
+
+});
+
+function saveStructureCookie(sketcher) {
+	var mol;
+
+	if(sketcher == 'marvinjs'){
+	    mol = marvinSketcherInstance.exportAsMrv();
+	} else if (sketcher == 'jsme'){
+		mol = document.JSME.jmeFile();
+	} else {
+        return;
+	}
+
+    document.cookie = sketcher+"="+mol+";expires=Thu, 31 Dec 2020 00:00:00 GMT; path=/";
+}
+
+function readStructureCookie(sketcher) {
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(sketcher+"=") == 0) {
+        var mol = c.substring(sketcher.length+1,c.length);
+
+        if(mol.length > 0 && mol.search("^null|undefined$") == -1){
+            if(sketcher == 'jsme'){
+                document.JSME.readMolecule(mol);
+            }
+            if(sketcher == 'marvinjs' && typeof marvinSketcherInstance !== 'undefined'){
+                if(mol.match(/^CHEMBL\d+$|^\d+$/)){
+                	setMarvinFromId(mol);
+                } else {
+            		marvinSketcherInstance.importAsMrv(mol);
+                }
+            }
+        }
+        return;
+      }
+   }
+}
+
+function setMarvinFromId(id){
+	$.ajax({
+		   type: "POST",
+		   url: '/chembl/'+'download_helper/molForSketcher/'+id,
+		   success: function(data) {
+              marvinSketcherInstance.importStructure('molfile',(data['molfile']));
+		   }
+	});
+}
+
+function deleteStructureCookie() {
+    document.cookie = "jsme=;expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+    document.cookie = "marvinjs=;expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+}
+
+function resetForm(){
+
+    if(COMPOUND_SKETCHER == 'jsme'){
+  	    document.JSME.reset();
+    }
+
+    if(COMPOUND_SKETCHER == 'marvinjs'){
+    	marvinSketcherInstance.clear();
+    }
+
+    document.compoundForm.molfile.value = "";
+
+    deleteStructureCookie();
+}
+
+function displaySketcher(){
+	//Make sure all are hidden
+	$(".sketcher_div").hide();
+    if(COMPOUND_SKETCHER == 'jsme'){
+        $("#jsme_sketcher").show();
+        //document.JSME.repaint();
+        //readStructureCookie(COMPOUND_SKETCHER);
+    }else if (COMPOUND_SKETCHER == 'marvinjs'){
+        $("#marvinjs_sketcher").show();
+        //readStructureCookie(COMPOUND_SKETCHER);
+    } else {//default
+        $("#marvinjs_sketcher").show();
+    }
+}
+
+$("#sketch_selector").change(function() {
+    var sketcher = this.value;
+    if(sketcher.search("jsme|marvinjs") != -1){
+        COMPOUND_SKETCHER = sketcher;
+        saveSketcherCookie();
+        displaySketcher();
+    }
+    $("#sketch_selector option:first").attr('selected', 'selected' );
+});
+
+function readSketcherCookie() {
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf("chembl_sketcher=") == 0) {
+            var sketcher = c.substring(16,c.length);
+
+            // Test for marvin
+            if(sketcher == 'marvin'){
+                return "marvinjs";
+            }
+
+            return sketcher;
+        }
+    }
+    // Default to marvin sketcher
+    return "marvinjs";
+}
+
+function saveSketcherCookie() {
+    document.cookie = "chembl_sketcher="+COMPOUND_SKETCHER+";expires=Thu, 31 Dec 2020 00:00:00 GMT; path=/";
+}
+
+function deleteSketcherCookie() {
+    document.cookie = "chembl_sketcher=;expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+}
+</script>
+<!-- end page contents  here -->
+
+					<!-- InstanceEndEditable -->
+					<img src="https://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></td>
+					<td class="rightmenucell" id="rightmenucell">
+					  <div class="rightmenu" id="rightmenu"><img src="https://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></div>
+				  	</td>
+				</tr>
+				</table>
+
+			<div id="elixir-banner" data-color="blue" data-name="ChEMBL" data-description="ChEMBL is an Elixir Core Data Resource" data-more-information-link="https://www.elixir-europe.org/about-us/who-we-are/nodes/embl-ebi" data-use-basic-styles="true"></div><script defer="defer" src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"></script><script type="text/javascript">var target = document.querySelector("#elixir-banner");var observer = new MutationObserver(function(mutations) {  mutations.forEach(function(mutation) {    setTimeout(function(){$(".elixir-banner-name").css("font-size", "1.3rem");}, 500);  });});var config = { attributes: true, childList: true, characterData: true };observer.observe(target, config);</script><table class="footerpane" id="footerpane" summary="The main footer pane of the page" style="clear:right;"><tr><td colspan ="4" class="footerrow"><div class="footerdiv" id="footerdiv">
+  <div class="footer">
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <!--
+    <div id="local-footer" class="grid_24 clearfix">
+    </div>
+    -->
+    <!-- End optional local footer -->
+
+    <div id="global-footer" class="grid_24 clearfix">
+      <div class="nav" id="global-nav-expanded">
+        <div class="grid_4 alpha">
+          <h3 class="embl-ebi"><a href="https://www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage">EMBL-EBI</a></h3>
+        </div>
+        <div class="grid_4">
+          <h3 class="services"><a href="https://www.ebi.ac.uk/services" title="Services">Services</a></h3>
+        </div>
+        <div class="grid_4">
+          <h3 class="research"><a href="https://www.ebi.ac.uk/research" title="Research">Research</a></h3>
+        </div>
+        <div class="grid_4">
+          <h3 class="training"><a href="https://www.ebi.ac.uk/training" title="Training">Training</a></h3>
+        </div>
+        <div class="grid_4">
+          <h3 class="industry"><a href="https://www.ebi.ac.uk/industry" title="Industry">Industry</a></h3>
+        </div>
+        <div class="grid_4 omega">
+          <h3 class="about"><a href="https://www.ebi.ac.uk/about" title="About us">About us</a></h3>
+        </div>
+      </div>
+
+      <div class="section" id="ebi-footer-meta">
+        <p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>
+        <p>Copyright &copy; EMBL-EBI 2012 | EBI is an Outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="https://www.ebi.ac.uk/about/privacy" title="">Privacy</a> | <a href="https://www.ebi.ac.uk/about/cookies" title="">Cookies</a> | <a href="https://www.ebi.ac.uk/about/terms-of-use" title="">Terms of use</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</td></tr></table>	</div>
+
+
+					<!-- BEGIN: VF 2.0 sample -->
+					<!-- Data protection banner -->
+					<link rel="import" href="https://dev.beta.embl.org/api/v1/pattern.html?filter-content-type=article&filter-id=581&pattern=node-body&amp;source=contenthub" data-target="self" data-embl-js-content-hub-loader>
+					<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/components/raw/vf-banner/vf-banner.css">
+					<!-- END: VF 2.0 sample -->
+
+
+		      <script src="https://dev.assets.emblstatic.net/vf/scripts/scripts.js"></script>
+		      <link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/css/styles.css">
+
+
+
+    </body></html>

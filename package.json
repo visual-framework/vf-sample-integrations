@@ -18,6 +18,8 @@
   "homepage": "https://github.com/visual-framework/vf-sample-integrations#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-markdown": "^3.0.0"
   }
 }
