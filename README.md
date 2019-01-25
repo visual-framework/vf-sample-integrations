@@ -28,15 +28,15 @@ To illustrate, on the below demos we use the VF to:
 <!-- END: VF 2.0 sample -->
 ```
 
-In both cases this can be done without disrupting existing page styles.
+In both cases this can be done without disrupting existing page styles and JavaScript.
 
 ### View the demos
 
-- [Ensembl](ensembl.html)
-- [PDBe](pdbe.html)
-- [Uniprot](uniprot.html)
-- [Chembl](chembl.html)
-- [Chembl beta](chembl-beta.html)
+- [Ensembl](samples/ensembl.html)
+- [PDBe](samples/pdbe.html)
+- [Uniprot](samples/uniprot.html)
+- [Chembl](samples/chembl.html)
+- [Chembl beta](samples/chembl-beta.html)
 
 ### What are you adding in
 

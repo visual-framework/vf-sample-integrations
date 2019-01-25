@@ -7,13 +7,13 @@ gulp.task('markdown', () =>
   gulp.src('README.md')
       .pipe(inject.append('\n<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/css/styles.css">'))
       .pipe(markdown())
-      .pipe(gulp.dest('samples'))
+      .pipe(gulp.dest('./'))
 );
 
 // Static Server + watching scss/html files
 gulp.task('serve', function() {
   browserSync.init({
-    server: "./samples",
+    server: "./",
     startPath: 'README.html'
   });
   gulp.watch("samples/*.html").on('change', browserSync.reload);
