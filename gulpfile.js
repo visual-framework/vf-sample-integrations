@@ -5,7 +5,7 @@ const inject      = require('gulp-inject-string');
 
 gulp.task('markdown', () =>
   gulp.src('README.md')
-      .pipe(inject.append('\n<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/css/styles.css">'))
+      .pipe(inject.append('\n<link rel="stylesheet" media="all" href="https://dev.assets.emblstatic.net/vf/v2.0.0-alpha.5/css/styles.css">'))
       .pipe(markdown())
       .pipe(gulp.dest('./'))
 );
